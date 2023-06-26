@@ -244,7 +244,7 @@ input, button {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 1s;
+  background-color: #282828;
 }
 #container .cont1 .topBg01 {
   background-image: url(/img/top_bg_01.jpg);
