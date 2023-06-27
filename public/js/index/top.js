@@ -1,7 +1,7 @@
 function cont1Change() {
-    const topBg01 = document.querySelector(".topBg01");
-    const topBg02 = document.querySelector(".topBg02");
-    const topBg03 = document.querySelector(".topBg03");
+    const topBg01 = document.querySelector("#top .topBg01");
+    const topBg02 = document.querySelector("#top .topBg02");
+    const topBg03 = document.querySelector("#top .topBg03");
     const g = 5000; // g와 h는 임의의 값으로 설정하였습니다.
     const h = 1500;
 

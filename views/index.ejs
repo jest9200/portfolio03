@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NESTHOTEL TOKYO HANZOMON</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/index/scroll.js"></script>
     <script defer src="/js/index/sideMenu.js"></script>
-    <script defer src="/js/index/cont1.js"></script>
+    <script defer src="/js/index/top.js"></script>
+    <script defer src="/js/index/cont2.js"></script>
 </head>
+
 <body>
     <div id="header_rel">
         <a href="#">
@@ -36,7 +43,7 @@
             <img src="/img/arrow_right.png">
         </a>
     </div>
-    <div id="sideMenu">
+    <div id="side_menu">
         <a class="close" href="#">
             <img src="/img/icon_menu_close.png">
         </a>
@@ -47,15 +54,15 @@
         </a>
         <ul>
             <li class="rooms">
-                <span>GUEST<br/>ROOMS</span>
+                <span>GUEST<br />ROOMS</span>
                 <img src="/img/icon_step.png">
             </li>
             <li class="breakfast">
-                <span>FREE<br/>BREAKFAST</span>
+                <span>FREE<br />BREAKFAST</span>
                 <img src="/img/icon_step.png">
             </li>
             <li class="features">
-                <span>HOTEL<br/>FEATURES</span>
+                <span>HOTEL<br />FEATURES</span>
                 <img src="/img/icon_step.png">
             </li>
             <li class="access">
@@ -79,14 +86,327 @@
             <a href="#">JOIN</a>
         </div>
     </div>
-    <div id="container">
-        <div class="cont1">
-            <div class="topBg01"></div>
-            <div class="topBg02"></div>
-            <div class="topBg03"></div>
-        </div>
-        <div class="cont2"></div>
+    <div id="top">
+        <div class="topBg01"></div>
+        <div class="topBg02"></div>
+        <div class="topBg03"></div>
     </div>
-    <div id="footer"></div>
+    <div id="container">
+        <div class="cont1 introduce">
+            <div class="book_now">
+                <a href="#">
+                    <div class="book_title">BOOK<br />NOW</div>
+                    <img class="arrow" src="/img/arrow_right.png">
+                    <img class="left_pc" src="/img/par_left_book.png">
+                    <img class="right_pc" src="/img/par_right_book.png">
+                    <img class="left_sp" src="/img/par_left_book_sp.png">
+                    <img class="right_sp" src="/img/par_right_book_sp.png">
+                </a>
+            </div>
+            <div class="text_wrap">
+                <span>NEST HOTEL TOKYO HANZOMON</span>
+                <h2 class="pc">A HIDEAWAY IN THE <br />CENTER OF THE CITY.</h2>
+                <h2 class="sp">A HIDEAWAY IN THE CENTER OF THE CITY.</h2>
+                <h3>With a book or drink in hand, stay and relax at your very own<br />hideaway in the center of the
+                    city.</h3>
+            </div>
+            <form id="search" method="get"> <!-- 나중에 action 추가-->
+                <div class="src_checkin">
+                    <span>CHECK-IN</span>
+                    <select name="dt_yyyy_mm" id="dt_yyyy_mm">
+                        <option value="202307">Jul 2023</option>
+                        <option value="202308">Aug 2023</option>
+                        <option value="202309">Sep 2023</option>
+                        <option value="202310">Oct 2023</option>
+                        <option value="202311">Nov 2023</option>
+                        <option value="202312">Dec 2023</option>
+                    </select>
+                    <select name="dt_dd" id="dt_dd">
+                        <% for(let i=1; i<31; i++) { %>
+                            <option value=<%- i %>><%- i %></option>
+                            <% } %>
+                    </select>
+                </div>
+                <div class="src_checkout">
+                    <span>CHECK-OUT</span>
+                    <select name="dt_yyyy_mm" id="dt_yyyy_mm">
+                        <option value="202307">Jul 2023</option>
+                        <option value="202308">Aug 2023</option>
+                        <option value="202309">Sep 2023</option>
+                        <option value="202310">Oct 2023</option>
+                        <option value="202311">Nov 2023</option>
+                        <option value="202312">Dec 2023</option>
+                    </select>
+                    <select name="dt_dd" id="dt_dd">
+                        <% for(let i=1; i<=31; i++) { %>
+                            <option value=<%- i %>><%- i %></option>
+                            <% } %>
+                    </select>
+                </div>
+                <div class="src_guests">
+                    <span>GUESTS</span>
+                    <select name="guests">
+                        <% for(let i=1; i<=5; i++) { %>
+                            <option value=<%- i %>><%- i %></option>
+                            <% } %>
+                    </select>
+                </div>
+                <div class="src_rooms">
+                    <span>ROOMS</span>
+                    <select name="rooms">
+                        <% for(let i=1; i<=3; i++) { %>
+                            <option value=<%- i %>><%- i %></option>
+                            <% } %>
+                    </select>
+                </div>
+                <div class="src_button">
+                    <input type="submit" name="submit" value="SEARCH">
+                    <img class="left_pc" src="/img/par_left_book.png">
+                    <img class="right_pc" src="/img/par_right_book.png">
+                    <img class="left_sp" src="/img/par_left_book_sp.png">
+                    <img class="right_sp" src="/img/par_right_book_sp.png">
+                </div>
+            </form>
+            <a class="mybookings" href="#">
+                <span>My bookings</span><img src="/img/arrow_right.png">
+            </a>
+        </div>
+        <div class="cont2 rooms">
+            <div class="top_wrap">
+                <div class="title">
+                    <div>GUEST<br/>ROOMS</div>
+                    <img class="left_pc" src="/img/par_left_title.png">
+                    <img class="right_pc" src="/img/par_right_title.png">
+                    <img class="left_sp" src="/img/par_left_title_sp.png">
+                    <img class="right_sp" src="/img/par_right_title_sp.png">
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide one">
+                            <div>
+                                <span class="meter">11<span>m²</span></span>
+                                SINGLE<br/>ROOM
+                            </div>
+                        </div>
+                        <div class="swiper-slide two">
+                            <div>
+                                <span class="meter">15<span>m²</span></span>
+                                TWIN<br/>ROOM
+                            </div>
+                        </div>
+                        <div class="swiper-slide three">
+                            <div>
+                                <span class="meter">25<span>m²</span></span>
+                                BARRIER-FREE<br/>ROOM
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="bot_wrap">
+                <div class="left_wrap">
+                    <div class="context01">
+                        <img class="bed" src="/img/icon_room_bed.png">
+                        <div class="txt">
+                            All rooms equipped with world-class<br/>Simmons beds
+                            <span>Pillow top 6.5 Inch mattress<br />Envelope style duvet cover</span>
+                        </div>
+                    </div>
+                    <div class="context02">
+                        <img src="/img/icon_room_sofa.png">
+                        <div class="txt">Tables and leather sofas</div>
+                    </div>
+                </div>
+                <div class="right_wrap">
+                    <div class="context01">
+                        <img class="tv" src="/img/icon_room_tv.png">
+                        <div class="txt">
+                            32 inch LCD TV
+                            <span>*40 inch for Twin rooms</span>
+                        </div>
+                    </div>
+                    <div class="context02">
+                        <img class="usb" src="/img/icon_room_usb.png">
+                        <div class="txt">Bedside USB ports and sockets</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont3 breakfast">
+            <div class="title">
+                <div>FREE<br/>BREAKFAST</div>
+                <img class="left_pc" src="/img/par_left_title.png">
+                <img class="right_pc" src="/img/par_right_title.png">
+                <img class="left_sp" src="/img/par_left_title_sp.png">
+                <img class="right_sp" src="/img/par_right_title_sp.png">
+            </div>
+            <div class="banner"></div>
+            <div class="context">
+                <p>We offer guests a hand-picked selection of natural yeast bread at our lobby.<br/>
+                Guests are invited to enjoy the complimentary breakfast in the comfort of their rooms.</p>
+            </div>
+        </div>
+        <div class="cont4 features">
+            <div class="top_wrap">
+                <div class="title">
+                    <div>HOTEL<br/>FEATURES</div>
+                    <img class="left_pc" src="/img/par_left_title.png">
+                    <img class="right_pc" src="/img/par_right_title.png">
+                    <img class="left_sp" src="/img/par_left_title_sp.png">
+                    <img class="right_sp" src="/img/par_right_title_sp.png">
+                </div>
+                <div class="banner"></div>
+                <div class="context">
+                    <div class="left_wrap">
+                        <div>
+                            <p><span class="subtitle01">CHECK-IN</span><span>After 15:00</span></p>
+                        </div>
+                        <div>
+                            <p><span class="subtitle01">CHECK-OUT</span><span>Until 11:00</span></p>
+                        </div>
+                    </div>
+                    <div class="right_wrap">
+                        <div>
+                            <p><span class="subtitle02">ROOMS</span><span>102 rooms (no smoking)</span></p>
+                        </div>
+                        <div>
+                            <p><span class="subtitle02">PARKING</span><span>None</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot_wrap">
+                <h4>FACILITIES & AMENITIES</h4>
+                <div class="list_wrap">
+                    <ul>
+                        <li>Free Wi-Fi</li>
+                        <li>Refrigerator</li>
+                        <li>120cm semi-double bed<br/>
+                            <span>*100cm single bed for Twin rooms</span></li>
+                        <li>32 inch LCD TV</li>
+                        <li>Safe box</li>
+                        <li>Toilet with built-in bidet</li>
+                    </ul>
+                    <ul>
+                        <li>Electric kettle</li>
+                        <li>Dryer</li>
+                        <li>Pajama set</li>
+                        <li>Bath towel & face towel</li>
+                        <li>Shampoo</li>
+                        <li>Conditioner</li>
+                    </ul>
+                    <ul>
+                        <li>Body soap</li>
+                        <li>Face & hand soap</li>
+                        <li>Toothbrush</li>
+                        <li>Razor</li>
+                        <li>Body towel</li>
+                    </ul>
+                    <ul>
+                        <li>Vanity kit<br/>
+                            (cotton, hair tie, and cotton swab)</li>
+                        <li>Drip coffee<br/>
+                            (milk & sugar set)</li>
+                        <li>Deodorizing spray</li>
+                        <li>Disposable slippers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cont5 access">
+            <div class="title">
+                <div>ACCESS</div>
+                <img class="left_pc" src="/img/par_left_title.png">
+                <img class="right_pc" src="/img/par_right_title.png">
+                <img class="left_sp" src="/img/par_left_title_sp.png">
+                <img class="right_sp" src="/img/par_right_title_sp.png">
+            </div>
+            <div class="street">
+                <img class="img_pc" src="/img/access_map_street.png">
+                <img class="img_sp" src="/img/access_map_street_sp.png">
+                <div class="context">
+                    <div class="line01">
+                        <p><span>HANZOMON EXITS</span> EV: 5, 6&nbsp;&nbsp;STAIRS: 1~4</p>
+                        <p><span>KOJIMACHI EXITS</span> EV: 1, 2&nbsp;&nbsp;STAIRS: 3~6</p>
+                    </div>
+                    <div class="line02">
+                        <p>Nest Hotel Tokyo Hanzomon</p>
+                        <p class="unbold">2-18 Hayabusacho, Chiyoda-ku, Tokyo, Japan</p>
+                    </div>
+                    <div class="line03">
+                        <p><span>TEL</span> +81-3-6261-4022</p>
+                        <p><span>FAX</span> +81-3-6261-4023</p>
+                        <p><span>EMAIL</span> info.tokyo-hanzomon@nesthotel.co.jp</p>
+                    </div>
+                    <a class="location" target="_blank" href="https://www.google.co.jp/maps/place/%E3%83%8D%E3%82%B9%E3%83%88%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E5%8D%8A%E8%94%B5%E9%96%80/@35.6833001,139.7397669,17z/data=!4m8!3m7!1s0x60188c7a80c36b79:0xbe86e93b2f7e2c3!5m1!1s2018-05-07!8m2!3d35.6833128!4d139.7419786!16s%2Fg%2F11hcvw7m34?hl=ja&entry=ttu">GOOGLE MAPS<img src="/img/arrow_right.png"></a>
+                </div>
+            </div>
+            <div class="train">
+                <img class="img_pc" src="/img/access_map_train.jpg">
+                <img class="img_sp" src="/img/access_map_train_sp.jpg">
+                <div class="context">
+                    <h4>TRAIN ACCESS</h4>
+                    <p>1 minute walk from Hanzomon Station, Exit 1, Tokyo Metro Hanzomon line.<span>*For guests with luggage, 1 minute walk from Exit 6 (escalator and elevator available).</span></p>
+                    <p>6 minutes walk from Kojimachi Station, Exit 1, Tokyo Metro Yurakucho Line.</p>
+                    <p>12 minutes by train from Tokyo Station, 10 minutes by taxi from Tokyo Station: Marunouchi Central Exit.</p>
+                    <p>40 minutes by train to Haneda Airport.</p>
+                    <p>40 minutes by train to Tokyo Disneyland.</p>
+                    <p>20 minutes by train to Tokyo Sky Tree.</p>
+                </div>
+            </div>
+            <div class="airport_pc">
+                <div class="line01">
+                    <p>By Train <span>12min</span></p>
+                    <img src="/img/line01_pc.png">
+                </div>
+                <div class="line02">
+                    <h4>AIRPORT ACCESS</h4>
+                    <h5>HANEDA AIRPORT</h5>
+                    <p>By Tokyo Monorail <span>50min</span></p>
+                    <img src="/img/line02_pc.png">
+                </div>
+                <div class="line03">
+                    <p>By Keihinkyuko Line <span>40min</span></p>
+                    <img src="/img/line03_pc.png">
+                </div>
+                <div class="line04">
+                    <h5>NARITA AIRPORT</h5>
+                    <p>By Limousine Bus <span>90min</span></p>
+                    <img src="/img/line04_pc.png">
+                </div>
+                <div class="line05">
+                    <p>By JR Narita Express <span>90min</span></p>
+                    <img src="/img/line05_pc.png">
+                </div>
+            </div>
+            <!-- <div class="airport_sp"></div> 반응형할때 만들기 -->
+        </div>
+        <div class="cont6 gallery">
+            <div class="title">
+                <div>GALLERY</div>
+                <img class="left_pc" src="/img/par_left_title.png">
+                <img class="right_pc" src="/img/par_right_title.png">
+                <img class="left_sp" src="/img/par_left_title_sp.png">
+                <img class="right_sp" src="/img/par_right_title_sp.png">
+            </div>
+            <div class="banner01"></div>
+            <div class="banner02"></div>
+            <div class="banner03"></div>
+            <div class="banner04"></div>
+        </div>
+        <div class="cont7 contact">
+            <div class="title">
+                <div>CONTACT</div>
+                <img class="left_pc" src="/img/par_left_title.png">
+                <img class="right_pc" src="/img/par_right_title.png">
+                <img class="left_sp" src="/img/par_left_title_sp.png">
+                <img class="right_sp" src="/img/par_right_title_sp.png">
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
 </body>
+
 </html>
