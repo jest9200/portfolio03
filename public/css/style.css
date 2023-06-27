@@ -232,8 +232,9 @@ input, button {
 }
 
 #top {
-  display: flex;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: calc(100vh - 315px);
 }
@@ -262,14 +263,15 @@ input, button {
 
 #container {
   position: absolute;
-  top: calc(100vh - 315px);
+  top: calc(100% - 315px);
   left: 0;
   width: 100%;
+  height: auto;
   background-color: #282828;
   z-index: 2;
 }
 #container .cont1 {
-  padding: 100px 0 190px;
+  padding: 100px 0 0;
   position: relative;
 }
 #container .cont1 .book_now {
@@ -507,6 +509,9 @@ input, button {
 #container .cont1 .mybookings:hover img {
   transform: translateX(5px);
 }
+#container .cont2 {
+  padding-top: 190px;
+}
 #container .cont2 .top_wrap {
   position: relative;
 }
@@ -628,7 +633,7 @@ input, button {
 }
 #container .cont2 .bot_wrap {
   display: flex;
-  margin: 50px 0 155px 60px;
+  margin: 50px 0 0 60px;
   transition: all 0.8s;
 }
 #container .cont2 .bot_wrap .left_wrap > div, #container .cont2 .bot_wrap .right_wrap > div {
@@ -661,7 +666,7 @@ input, button {
 }
 #container .cont3 {
   position: relative;
-  margin-bottom: 180px;
+  margin-top: 180px;
   color: #fff;
 }
 #container .cont3 .title {
@@ -723,6 +728,9 @@ input, button {
   left: 60px;
   font-size: 17px;
   line-height: 27px;
+}
+#container .cont4 {
+  margin-top: 180px;
 }
 #container .cont4 .top_wrap {
   position: relative;
@@ -1167,4 +1175,129 @@ input, button {
 }
 #container .cont7 .title .right_sp {
   right: 0;
+}
+#container .cont7 .context {
+  margin-left: 60px;
+  padding-bottom: 65px;
+  transition: all 0.8s;
+  display: flex;
+}
+#container .cont7 .context .txt_col01 {
+  margin-right: 40px;
+}
+#container .cont7 .context .txt_col01 > a {
+  color: #fff;
+  display: block;
+  margin-bottom: 30px;
+}
+#container .cont7 .context .txt_col01 > a img {
+  width: 8px;
+  height: 14px;
+  vertical-align: middle;
+  margin: 0px 0 0 10px;
+  transition: all 0.5s ease-out;
+}
+#container .cont7 .context .txt_col01 > a:hover img {
+  transform: translateX(5px);
+}
+#container .cont7 .context .txt_col01 ul {
+  margin-top: 35px;
+}
+#container .cont7 .context .txt_col01 ul li {
+  color: #fff;
+  line-height: 27px;
+}
+#container .cont7 .context .txt_col01 ul li span {
+  display: block;
+}
+#container .cont7 .context .txt_col01 ul li .unbold {
+  color: #969696;
+}
+#container .cont7 .context .txt_col01 ul li .tel,
+#container .cont7 .context .txt_col01 ul li .fax {
+  display: inline-block;
+}
+#container .cont7 .context .txt_col02 {
+  margin-right: 40px;
+}
+#container .cont7 .context .txt_col02 .subtitle {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+#container .cont7 .context .txt_col02 ul {
+  margin-top: 18px;
+}
+#container .cont7 .context .txt_col02 ul li {
+  color: #969696;
+  line-height: 36px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+#container .cont7 .context .txt_col02 ul li span {
+  display: inline-block;
+  width: 140px;
+  color: #fff;
+}
+#container .cont7 .context .txt_col03 ul {
+  margin-top: 38px;
+}
+#container .cont7 .context .txt_col03 ul li {
+  color: #969696;
+  line-height: 36px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+#container .cont7 .context .txt_col03 ul li span {
+  display: inline-block;
+  width: 100px;
+  color: #fff;
+}
+#container .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
+#container .footer .left_wrap {
+  padding-left: 60px;
+}
+#container .footer .left_wrap .totop {
+  margin-top: 10px;
+  width: 38px;
+  cursor: pointer;
+}
+#container .footer .left_wrap .totop img {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+#container .footer .left_wrap .totop p {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+#container .footer .left_wrap .totop:hover img {
+  transform: translateY(-10px);
+}
+#container .footer .left_wrap ul {
+  margin-top: 30px;
+  display: flex;
+}
+#container .footer .left_wrap ul li {
+  margin-right: 35px;
+}
+#container .footer .left_wrap ul li a {
+  font-size: 13.5px;
+  color: #fff;
+}
+#container .footer .right_wrap {
+  padding-right: 60px;
+  color: #fff;
+  font-size: 13.5px;
+}
+#container .footer .right_wrap .copyright {
+  margin-left: 35px;
+  color: #969696;
 }

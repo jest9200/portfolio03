@@ -1,7 +1,5 @@
 const headerFix = document.querySelector("#header_fix");
 const topCont = document.querySelector("#top");
-const cont1 = document.querySelector("#container .cont1");
-const cont2 = document.querySelector("#container .cont2");
 // console.log(cont1.offsetTop);
 // console.dir(topCont);
 
