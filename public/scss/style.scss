@@ -1,4 +1,31 @@
 @import "reset";
+html, body { 
+    max-width: 100%; 
+    overflow-x: hidden; 
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #282828;
+    z-index: 100;
+    overflow: hidden;
+    transition: all 1s;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 243px;
+        height: auto;
+        z-index: 5;
+        opacity: 0;
+        transition: all 1s;
+    }
+}
 
 #header_rel {
     position: absolute;
@@ -536,9 +563,10 @@
                 }
             }
             .swiper {
+                opacity: 0;
                 width: 100%;
                 height: 550px;
-                transition: all .8s;
+                transition: all 1.2s;
                 .swiper-wrapper {
                     .swiper-slide {
                         height: 100%;
@@ -611,9 +639,10 @@
             }
         }
         .bot_wrap {
+            opacity: 0;
             display: flex;
             margin: 50px 0 0 60px;
-            transition: all .8s;
+            transition: all 1.2s;
             .left_wrap,.right_wrap {
                 > div {
                     display: flex;
@@ -643,6 +672,16 @@
             }
             .left_wrap {
                 margin-right: 70px;
+            }
+        }
+        .bot_wrap.open {
+            opacity: 1;
+        }
+    }
+    .cont2.open {
+        .top_wrap {
+            .swiper {
+                opacity: 1;
             }
         }
     }
@@ -694,6 +733,7 @@
             }
         }
         .banner {
+            opacity: 0;
             position: relative;
             width: 100%;
             height: 555px;
@@ -701,7 +741,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50% 90%;
-            transition: all .8s;
+            transition: all 1.2s;
         }
         .context {
             position: absolute;
@@ -709,6 +749,11 @@
             left: 60px;
             font-size: 17px;
             line-height: 27px;
+        }
+    }
+    .cont3.open {
+        .banner {
+            opacity: 1;
         }
     }
     .cont4 {
@@ -761,6 +806,7 @@
                 }
             }
             .banner {
+                opacity: 0;
                 position: relative;
                 width: 100%;
                 height: 555px;
@@ -768,7 +814,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: 50% 100%;
-                transition: all .8s;
+                transition: all 1.2s;
             }
             .context {
                 position: absolute;
@@ -798,6 +844,8 @@
         }
         .bot_wrap {
             padding: 50px 0 60px;
+            opacity: 0;
+            transition: all 1.2s;
             h4 {
                 font-size: 25px;
                 color: #fff;
@@ -819,6 +867,16 @@
                         color: #969696;
                     }
                 }
+            }
+        }
+        .bot_wrap.open {
+            opacity: 1;
+        }
+    }
+    .cont4.open {
+        .top_wrap {
+            .banner {
+                opacity: 1;
             }
         }
     }
@@ -872,6 +930,8 @@
         }
         .street {
             padding-bottom: 80px;
+            opacity: 0;
+            transition: all 1.2s;
             .img_pc {
                 display: inline-block;
                 width: calc(50% + 50px);
@@ -935,6 +995,8 @@
         }
         .train {
             padding-bottom: 40px;
+            opacity: 0;
+            transition: all 1.2s;
             .img_pc {
                 display: inline-block;
                 width: calc(50% + 50px);
@@ -967,6 +1029,9 @@
                     }
                 }
             }
+        }
+        .train.open {
+            opacity: 1;
         }
         .airport_pc {
             color: #fff;
@@ -1058,6 +1123,11 @@
             }
         }
     }
+    .cont5.open {
+        .street {
+            opacity: 1;
+        }
+    }
     .cont6 {
         position: relative;
         padding-top: 185px;
@@ -1109,9 +1179,11 @@
             position: relative;
             width: 100%;
             height: 555px;
-            transition: all .8s;
+            transition: all 1.2s;
             background-repeat: no-repeat;
             background-size: cover;
+            opacity: 0;
+            transform: translateY(50px);
         }
         .banner01{
             background-image: url(/img/gallery01.jpg);
@@ -1128,6 +1200,13 @@
         .banner04{
             background-image: url(/img/gallery04.jpg);
             background-position: 50% 40%;
+        }
+        .banner01.open,
+        .banner02.open,
+        .banner03.open,
+        .banner04.open {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
     .cont7 {
@@ -1178,9 +1257,10 @@
             }
         }
         .context {
+            opacity: 0;
             margin-left: 60px;
             padding-bottom: 65px;
-            transition: all .8s;
+            transition: all 1.2s;
             display: flex;
             .txt_col01{
                 margin-right: 40px;
@@ -1259,11 +1339,17 @@
             }
         }
     }
+    .cont7.open {
+        .context {
+            opacity: 1;
+        }
+    }
     .footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         padding-bottom: 50px;
+        background-color: #282828;
         .left_wrap {
             padding-left: 60px;
             .totop {

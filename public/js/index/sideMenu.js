@@ -6,21 +6,28 @@ const masker = document.querySelector("#side_menu .masker");
 
 hMenuRel.addEventListener("click",(e)=>{
     e.preventDefault();
-    sideMenu.style.width = "295px";
-    masker.style.left = "235px";
+    openMenu();
 });
 
 hMenuFix.addEventListener("click",(e)=>{
     e.preventDefault();
-    sideMenu.style.width = "295px";
-    masker.style.left = "235px";
+    openMenu();
 });
 
 closeBtn.addEventListener("click",(e)=>{
     e.preventDefault();
+    closeMenu();
+});
+
+function openMenu(){
+    sideMenu.style.width = "295px";
+    masker.style.left = "235px";
+}
+
+function closeMenu(){
     sideMenu.style.width = "0px";
     masker.style.left = "60px";
-});
+}
 
 
 // 사이드메뉴의 li들 클릭시 각 섹션으로 부드럽게 스크롤 이동
@@ -46,6 +53,7 @@ sideList01.addEventListener("click",(e)=>{
         top: cont2.offsetTop + topCont.clientHeight,
         behavior: "smooth"
     });
+    closeMenu();
 });
 
 sideList02.addEventListener("click",(e)=>{
@@ -54,6 +62,7 @@ sideList02.addEventListener("click",(e)=>{
         top: cont3.offsetTop + topCont.clientHeight - 190,
         behavior: "smooth"
     });
+    closeMenu();
 });
 sideList03.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -61,6 +70,7 @@ sideList03.addEventListener("click",(e)=>{
         top: cont4.offsetTop + topCont.clientHeight - 190,
         behavior: "smooth"
     });
+    closeMenu();
 });
 sideList04.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -68,6 +78,7 @@ sideList04.addEventListener("click",(e)=>{
         top: cont5.offsetTop + topCont.clientHeight,
         behavior: "smooth"
     });
+    closeMenu();
 });
 sideList05.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -75,6 +86,7 @@ sideList05.addEventListener("click",(e)=>{
         top: cont6.offsetTop + topCont.clientHeight,
         behavior: "smooth"
     });
+    closeMenu();
 });
 sideList06.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -82,4 +94,5 @@ sideList06.addEventListener("click",(e)=>{
         top: cont7.offsetTop + topCont.clientHeight,
         behavior: "smooth"
     });
+    closeMenu();
 });

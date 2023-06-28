@@ -29,6 +29,34 @@ input, button {
   outline: none;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #282828;
+  z-index: 100;
+  overflow: hidden;
+  transition: all 1s;
+}
+#loader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 243px;
+  height: auto;
+  z-index: 5;
+  opacity: 0;
+  transition: all 1s;
+}
+
 #header_rel {
   position: absolute;
   top: 0;
@@ -560,9 +588,10 @@ input, button {
   right: 0;
 }
 #container .cont2 .top_wrap .swiper {
+  opacity: 0;
   width: 100%;
   height: 550px;
-  transition: all 0.8s;
+  transition: all 1.2s;
 }
 #container .cont2 .top_wrap .swiper .swiper-wrapper .swiper-slide {
   height: 100%;
@@ -632,9 +661,10 @@ input, button {
   right: 50px;
 }
 #container .cont2 .bot_wrap {
+  opacity: 0;
   display: flex;
   margin: 50px 0 0 60px;
-  transition: all 0.8s;
+  transition: all 1.2s;
 }
 #container .cont2 .bot_wrap .left_wrap > div, #container .cont2 .bot_wrap .right_wrap > div {
   display: flex;
@@ -663,6 +693,12 @@ input, button {
 }
 #container .cont2 .bot_wrap .left_wrap {
   margin-right: 70px;
+}
+#container .cont2 .bot_wrap.open {
+  opacity: 1;
+}
+#container .cont2.open .top_wrap .swiper {
+  opacity: 1;
 }
 #container .cont3 {
   position: relative;
@@ -713,6 +749,7 @@ input, button {
   right: 0;
 }
 #container .cont3 .banner {
+  opacity: 0;
   position: relative;
   width: 100%;
   height: 555px;
@@ -720,7 +757,7 @@ input, button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 90%;
-  transition: all 0.8s;
+  transition: all 1.2s;
 }
 #container .cont3 .context {
   position: absolute;
@@ -728,6 +765,9 @@ input, button {
   left: 60px;
   font-size: 17px;
   line-height: 27px;
+}
+#container .cont3.open .banner {
+  opacity: 1;
 }
 #container .cont4 {
   margin-top: 180px;
@@ -781,6 +821,7 @@ input, button {
   right: 0;
 }
 #container .cont4 .top_wrap .banner {
+  opacity: 0;
   position: relative;
   width: 100%;
   height: 555px;
@@ -788,7 +829,7 @@ input, button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
-  transition: all 0.8s;
+  transition: all 1.2s;
 }
 #container .cont4 .top_wrap .context {
   position: absolute;
@@ -813,6 +854,8 @@ input, button {
 }
 #container .cont4 .bot_wrap {
   padding: 50px 0 60px;
+  opacity: 0;
+  transition: all 1.2s;
 }
 #container .cont4 .bot_wrap h4 {
   font-size: 25px;
@@ -835,6 +878,12 @@ input, button {
 }
 #container .cont4 .bot_wrap .list_wrap li span {
   color: #969696;
+}
+#container .cont4 .bot_wrap.open {
+  opacity: 1;
+}
+#container .cont4.open .top_wrap .banner {
+  opacity: 1;
 }
 #container .cont5 {
   position: relative;
@@ -887,6 +936,8 @@ input, button {
 }
 #container .cont5 .street {
   padding-bottom: 80px;
+  opacity: 0;
+  transition: all 1.2s;
 }
 #container .cont5 .street .img_pc {
   display: inline-block;
@@ -944,6 +995,8 @@ input, button {
 }
 #container .cont5 .train {
   padding-bottom: 40px;
+  opacity: 0;
+  transition: all 1.2s;
 }
 #container .cont5 .train .img_pc {
   display: inline-block;
@@ -976,6 +1029,9 @@ input, button {
 #container .cont5 .train .context p span {
   color: #969696;
   display: block;
+}
+#container .cont5 .train.open {
+  opacity: 1;
 }
 #container .cont5 .airport_pc {
   color: #fff;
@@ -1056,6 +1112,9 @@ input, button {
   height: auto;
   max-width: 1158px;
 }
+#container .cont5.open .street {
+  opacity: 1;
+}
 #container .cont6 {
   position: relative;
   padding-top: 185px;
@@ -1108,9 +1167,11 @@ input, button {
   position: relative;
   width: 100%;
   height: 555px;
-  transition: all 0.8s;
+  transition: all 1.2s;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0;
+  transform: translateY(50px);
 }
 #container .cont6 .banner01 {
   background-image: url(/img/gallery01.jpg);
@@ -1127,6 +1188,13 @@ input, button {
 #container .cont6 .banner04 {
   background-image: url(/img/gallery04.jpg);
   background-position: 50% 40%;
+}
+#container .cont6 .banner01.open,
+#container .cont6 .banner02.open,
+#container .cont6 .banner03.open,
+#container .cont6 .banner04.open {
+  opacity: 1;
+  transform: translateY(0);
 }
 #container .cont7 {
   position: relative;
@@ -1177,9 +1245,10 @@ input, button {
   right: 0;
 }
 #container .cont7 .context {
+  opacity: 0;
   margin-left: 60px;
   padding-bottom: 65px;
-  transition: all 0.8s;
+  transition: all 1.2s;
   display: flex;
 }
 #container .cont7 .context .txt_col01 {
@@ -1253,11 +1322,15 @@ input, button {
   width: 100px;
   color: #fff;
 }
+#container .cont7.open .context {
+  opacity: 1;
+}
 #container .footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 50px;
+  background-color: #282828;
 }
 #container .footer .left_wrap {
   padding-left: 60px;

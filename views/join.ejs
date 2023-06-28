@@ -1,0 +1,61 @@
+<%- include("subHeader",{ title:"Join | NESTHOTEL TOKYO HANZOMON", cssFiles:["join.css"],jsFiles:[""] }) %>
+    <div id="container">
+        <div class="join_wrap">
+            <div class="title">
+                <div>JOIN US</div>
+                <img class="left_pc" src="/img/par_left_title.png">
+                <img class="right_pc" src="/img/par_right_title.png">
+                <img class="left_sp" src="/img/par_left_title_sp.png">
+                <img class="right_sp" src="/img/par_right_title_sp.png">
+            </div>
+            <form id="join" action="/joindb" method="post">
+                <div class="info">
+                    <div class="line01">
+                        <div class="form_control name">
+                            <label for="membername">Name</label>
+                            <input type="text" id="membername" name="membername" placeholder="Korean Name">
+                            <span class="error_msg"></span>
+                        </div>
+                        <div class="form_control birth">
+                            <label for="memberbirth">Birth</label>
+                            <input type="text" id="memberbirth" name="memberbirth" placeholder="Birth (ex. 2000-01-01)">
+                            <span class="error_msg"></span>
+                        </div>
+                    </div>
+                    <div class="line02">
+                        <div class="form_control email">
+                            <label for="memberemail">E-mail Address</i></label>
+                            <input type="text" id="memberemail" name="memberemail" placeholder="E-mail (ex. nesthotel@google.com)">
+                            <span class="error_msg"></span>
+                        </div>
+                    </div>
+                    <div class="line03">
+                        <div class="form_control phone">
+                            <label for="memberphone">Phone Number</label>
+                            <input type="text" id="memberphone" name="memberphone"
+                                placeholder="Phone (ex. 010-1234-5678)">
+                            <span class="error_msg"></span>
+                        </div>
+                    </div>
+                    <div class="line04">
+                        <div class="form_control pass">
+                            <label for="memberpass">Password</label>
+                            <input type="password" id="memberpass" name="memberpass" placeholder="Create your password">
+                            <span class="error_msg"></span>
+                        </div>
+                    </div>
+                    <div class="line05">
+                        <div class="check_wrap">
+                            <input id="confirm" type="checkbox">
+                            <label for="confirm">I agree to provide my personal information.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="signup" type="submit" disabled>SIGN UP</button>
+                    <a href="/login">Do you already have a Nest Hotel account? Login here.</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include("subFooter")%>

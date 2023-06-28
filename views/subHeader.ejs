@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title><%- title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <% if (cssFiles.length !== 0) { %>
+        <% for( let i=0; i<cssFiles.length; i++ ) { %>
+            <link rel="stylesheet" href="/css/<%- cssFiles[i] %>">
+        <% } %>
+    <% } %>
+    <% if (jsFiles.length !== 0) { %>
+        <% for( let i=0; i<jsFiles.length; i++ ) { %>
+            <script defer src="/js/<%- jsFiles[i] %>"></script>
+        <% } %>
+    <% } %>
+</head>
+
+<body>
+    <div id="header">
+        <a href="/">
+            <img class="logo" src="/img/logo.png">
+            <p>NEST HOTEL TOKYO HANZOMON</p>
+        </a>
+    </div>

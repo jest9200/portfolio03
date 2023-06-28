@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+  letter-spacing: 1.5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+img, video {
+  vertical-align: top;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+input, button {
+  outline: none;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#header > a {
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  z-index: 10;
+  text-align: center;
+}
+#header > a img {
+  width: 61px;
+}
+#header > a p {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #282828;
+}
+#footer .left_wrap {
+  padding-left: 60px;
+}
+#footer .left_wrap ul {
+  display: flex;
+}
+#footer .left_wrap ul li {
+  margin-left: 35px;
+}
+#footer .left_wrap ul li a {
+  font-size: 13.5px;
+  color: #fff;
+}
+#footer .right_wrap {
+  padding-right: 60px;
+  color: #fff;
+  font-size: 13.5px;
+}
+#footer .right_wrap .copyright {
+  margin-left: 35px;
+  color: #969696;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/top_bg_01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: #282828;
+}
+#container .login_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 80px 150px 50px;
+}
+#container .login_wrap .title {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  width: 330px;
+  height: 125px;
+  z-index: 4;
+  transform: translateX(-50%);
+  color: #fff;
+}
+#container .login_wrap .title > div {
+  position: absolute;
+  left: 28px;
+  top: 20px;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 80px;
+}
+#container .login_wrap .title .left_pc,
+#container .login_wrap .title .right_pc {
+  position: absolute;
+  bottom: 0;
+  width: 23px;
+  height: 121px;
+}
+#container .login_wrap .title .left_pc {
+  left: 0;
+}
+#container .login_wrap .title .right_pc {
+  right: 0;
+}
+#container .login_wrap .title .left_sp,
+#container .login_wrap .title .right_sp {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 19px;
+  height: 76px;
+}
+#container .login_wrap .title .left_sp {
+  left: 0;
+}
+#container .login_wrap .title .right_sp {
+  right: 0;
+}
+#container .login_wrap #login_form .email_wrap,
+#container .login_wrap #login_form .pass_wrap {
+  color: #fff;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+#container .login_wrap #login_form .email_wrap label,
+#container .login_wrap #login_form .pass_wrap label {
+  font-size: 22px;
+  margin-bottom: 10px;
+  letter-spacing: 0;
+}
+#container .login_wrap #login_form .email_wrap input,
+#container .login_wrap #login_form .pass_wrap input {
+  font-family: "Montserrat", sans-serif;
+  width: 440px;
+  padding: 15px 0px 15px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+#container .login_wrap #login_form .email_wrap input::-moz-placeholder, #container .login_wrap #login_form .pass_wrap input::-moz-placeholder {
+  color: #111;
+}
+#container .login_wrap #login_form .email_wrap input::placeholder,
+#container .login_wrap #login_form .pass_wrap input::placeholder {
+  color: #111;
+}
+#container .login_wrap #login_form .btn_wrap {
+  width: 450px;
+  padding-top: 10px;
+}
+#container .login_wrap #login_form .btn_wrap button {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #282828;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#container .login_wrap #login_form .btn_wrap button:hover {
+  background-color: #fff;
+  color: #282828;
+}
+#container .login_wrap #login_form .btn_wrap button:disabled {
+  background-color: #777;
+  color: #555;
+}
+#container .login_wrap #login_form .link_wrap {
+  text-align: center;
+}
+#container .login_wrap #login_form .link_wrap > a {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  margin: 15px 0;
+  letter-spacing: 0;
+  transition: all 0.5s;
+}
+#container .login_wrap #login_form .link_wrap > a:hover {
+  color: #fff;
+}

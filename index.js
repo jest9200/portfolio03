@@ -34,3 +34,11 @@ MongoClient.connect("mongodb+srv://jest9200:wjdtmdgur92@cluster0.iggxwpy.mongodb
 app.get("/",function(req,res){
     res.render("index.ejs");
 });
+
+app.get("/login",function(req,res){
+    res.render("login.ejs");
+});
+
+app.get("/join",function(req,res){
+    res.render("join.ejs");
+});

@@ -1,0 +1,30 @@
+<%- include("subHeader",{ title:"Login | NESTHOTEL TOKYO HANZOMON", cssFiles:["login.css"],jsFiles:[""] }) %>
+    <div id="container">
+        <div class="login_wrap">
+            <div class="title">
+                <div>LOGIN</div>
+                <img class="left_pc" src="/img/par_left_title.png">
+                <img class="right_pc" src="/img/par_right_title.png">
+                <img class="left_sp" src="/img/par_left_title_sp.png">
+                <img class="right_sp" src="/img/par_right_title_sp.png">
+            </div>
+            <form id="login_form" action="/logincheck" method="post">
+                <div class="email_wrap">
+                    <label for="userEmail">E-mail</label>
+                    <input id="userEmail" type="text" name="memberid" placeholder="Please enter your E-mail">
+                </div>
+                <div class="pass_wrap">
+                    <label for="userPw">Password</label>
+                    <input id="userPw" type="password" name="memberpass" placeholder="Please enter your Password">
+                </div>
+                <div class="btn_wrap">
+                    <button type="submit" disabled><i class="fa-solid fa-unlock-keyhole"></i>SIGN IN</button>
+                </div>
+                <div class="link_wrap">
+                    <a href="/join">If you don't have an account, Join Us</a>
+                    <a href="/">Return to Main</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include("subFooter")%>

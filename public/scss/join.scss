@@ -1,0 +1,190 @@
+@import "reset";
+@import "subHeaderFooter";
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/gallery01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: #282828;
+
+    .join_wrap {
+        position: absolute;
+        top: 23%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, .8);
+        padding: 80px 150px 50px;
+
+        .title {
+            position: absolute;
+            top: -90px;
+            left: 50%;
+            width: 390px;
+            height: 125px;
+            z-index: 4;
+            transform: translateX(-50%);
+            color: #fff;
+
+            >div {
+                position: absolute;
+                left: 28px;
+                top: 20px;
+                font-size: 80px;
+                font-weight: 400;
+                line-height: 80px;
+            }
+
+            .left_pc,
+            .right_pc {
+                position: absolute;
+                bottom: 0;
+                width: 23px;
+                height: 121px;
+            }
+
+            .left_pc {
+                left: 0;
+            }
+
+            .right_pc {
+                right: 0;
+            }
+
+            .left_sp,
+            .right_sp {
+                display: none;
+                position: absolute;
+                bottom: 0;
+                width: 19px;
+                height: 76px;
+            }
+
+            .left_sp {
+                left: 0;
+            }
+
+            .right_sp {
+                right: 0;
+            }
+        }
+
+        #join {
+            .info {
+                >div {
+                    margin-bottom: 20px;
+                }
+
+                .line01 {
+                    display: flex;
+                    justify-content: space-between;
+
+                    >div {
+                        width: 49%;
+
+                        label {
+                            color: #fff;
+                            display: block;
+                            margin-bottom: 7px;
+                            font-size: 20px;
+                            letter-spacing: 0;
+                        }
+
+                        input {
+                            font-family: 'Montserrat', sans-serif;
+                            width: 92%;
+                            padding: 10px;
+                            background-color: rgba(255, 255, 255, .9);
+                            color: #111;
+                            font-size: 15px;
+                            border: none;
+                            outline: none;
+
+                            &::placeholder {
+                                color: #111;
+                            }
+                        }
+                    }
+
+                }
+
+                .line02,
+                .line03,
+                .line04 {
+                    label {
+                        color: #fff;
+                        display: block;
+                        margin-bottom: 7px;
+                        font-size: 20px;
+                        letter-spacing: 0;
+                    }
+
+                    input {
+                        font-family: 'Montserrat', sans-serif;
+                        width: 500px;
+                        padding: 10px;
+                        background-color: rgba(255, 255, 255, .9);
+                        color: #111;
+                        font-size: 15px;
+                        border: none;
+                        outline: none;
+
+                        &::placeholder {
+                            color: #111;
+                        }
+                    }
+                }
+
+                .line05 {
+                    label {
+                        padding-left: 10px;
+                        color: #fff;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+
+            .btns {
+                padding-top: 30px;
+                button {
+                    width: 100%;
+                    padding: 15px 0;
+                    border: none;
+                    outline: none;
+                    background-color: #282828;
+                    color: #fff;
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: all .5s;
+                    &:hover {
+                        background-color: #fff;
+                        color: #282828;
+                    }
+                    &:disabled {
+                        background-color: #777;
+                        color: #555;
+                    }
+                }
+                a {
+                    display: block;
+                    margin-top: 5px;
+                    color: rgba(255, 255, 255, .5);
+                    letter-spacing: 0;
+                    font-size: 14px;
+                    transition: all .5s;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
