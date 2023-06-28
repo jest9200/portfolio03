@@ -51,6 +51,6 @@ window.addEventListener("load",()=>{
                 },900)
             },1000)
         },1500)
-    },300);
+    },500);
     cont1Change();
 });

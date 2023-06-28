@@ -174,11 +174,12 @@ body {
                     }
                 }
                 a {
-                    display: block;
-                    margin-top: 5px;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 15px;
                     color: rgba(255, 255, 255, .5);
                     letter-spacing: 0;
-                    font-size: 14px;
+                    font-size: 15px;
                     transition: all .5s;
                     &:hover {
                         color: #fff;

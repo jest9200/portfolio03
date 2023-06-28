@@ -242,11 +242,12 @@ body {
   color: #555;
 }
 #container .join_wrap #join .btns a {
-  display: block;
-  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0;
-  font-size: 14px;
+  font-size: 15px;
   transition: all 0.5s;
 }
 #container .join_wrap #join .btns a:hover {
