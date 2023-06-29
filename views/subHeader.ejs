@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <title><%- title %></title>
+    <!-- datepicker -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <% if (cssFiles.length !== 0) { %>
+    <% if (cssFiles.length !==0) { %>
         <% for( let i=0; i<cssFiles.length; i++ ) { %>
             <link rel="stylesheet" href="/css/<%- cssFiles[i] %>">
         <% } %>
     <% } %>
-    <% if (jsFiles.length !== 0) { %>
+    <% if (jsFiles.length !==0) { %>
         <% for( let i=0; i<jsFiles.length; i++ ) { %>
             <script defer src="/js/<%- jsFiles[i] %>"></script>
         <% } %>

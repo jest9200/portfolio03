@@ -1,0 +1,38 @@
+<%- include("subHeader",{ title:"BOOK | NESTHOTEL TOKYO HANZOMON", cssFiles:["bookdate.css"],jsFiles:[] }) %>
+    <div id="container">
+        <div class="cont1">
+            <div class="center">
+                <ul class="book_menu">
+                    <li class="on"><i class="fa-solid fa-circle-user"></i>Schedule / Guests</li>
+                    <li><i class="fa-solid fa-bed"></i>Plan / Room</li>
+                    <li><i class="fa-solid fa-briefcase"></i>Confirm Reservation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cont2">
+            <div class="center">
+                <form action="" method="get">
+                    <!-- <div class="checkin">
+                        <label for="checkin">Check In</label>
+                        <input id="checkin">
+                    </div>
+                    <div class="checkout">
+                        <label for="checkout">Check Out</label>
+                        <input id="checkout">
+                    </div> -->
+                    <div id="checkin"></div>
+                    <div id="checkout"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('#checkin, #checkout').datepicker({ 
+                dateFormat: "yy-mm-dd",
+                minDate: 0,
+            });
+        })
+    </script>
+    <%- include("subFooter")%>

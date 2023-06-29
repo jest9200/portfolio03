@@ -93,6 +93,7 @@ body {
 #container {
   width: 100%;
   height: 100vh;
+  padding-bottom: 100px;
   background-image: url(/img/gallery01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -101,7 +102,7 @@ body {
 }
 #container .join_wrap {
   position: absolute;
-  top: 23%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.8);
@@ -155,12 +156,26 @@ body {
 #container .join_wrap #join .info > div {
   margin-bottom: 20px;
 }
+#container .join_wrap #join .info > div .form_control .error_msg {
+  display: block;
+  padding-top: 2px;
+  font-size: 14px;
+  line-height: 15px;
+  color: pink;
+  letter-spacing: 0;
+}
+#container .join_wrap #join .info > div .form_control.ok span {
+  display: none;
+}
+#container .join_wrap #join .info > div .form_control.no input {
+  border: 1px solid pink;
+}
 #container .join_wrap #join .info .line01 {
   display: flex;
   justify-content: space-between;
 }
 #container .join_wrap #join .info .line01 > div {
-  width: 49%;
+  width: 46%;
 }
 #container .join_wrap #join .info .line01 > div label {
   color: #fff;
@@ -171,7 +186,7 @@ body {
 }
 #container .join_wrap #join .info .line01 > div input {
   font-family: "Montserrat", sans-serif;
-  width: 92%;
+  width: 100%;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
   color: #111;
@@ -198,7 +213,7 @@ body {
 #container .join_wrap #join .info .line03 input,
 #container .join_wrap #join .info .line04 input {
   font-family: "Montserrat", sans-serif;
-  width: 500px;
+  width: 100%;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
   color: #111;

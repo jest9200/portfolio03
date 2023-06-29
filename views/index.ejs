@@ -30,10 +30,17 @@
         <a href="/">
             <img class="logo" src="/img/logo.png">
         </a>
-        <a class="login" href="/login">
-            <span>LOGIN</span>
-            <img src="/img/arrow_right.png">
-        </a>
+        <% if (login) { %>
+            <a class="mypage" href="/mypage">
+                <span>My Bookings</span>
+                <img src="/img/arrow_right.png">
+            </a>
+        <% } else { %>
+            <a class="login" href="/login">
+                <span>LOGIN</span>
+                <img src="/img/arrow_right.png">
+            </a>
+        <% } %>
     </div>
     <div id="header_fix">
         <a href="#">
@@ -42,20 +49,34 @@
         <a href="#">
             <img class="logo" src="/img/logo.png">
         </a>
-        <a class="book" href="#">
-            <span>BOOK NOW</span>
-            <img src="/img/arrow_right.png">
-        </a>
+        <% if (login) { %>
+            <a class="book" href="/bookdate">
+                <span>BOOK NOW</span>
+                <img src="/img/arrow_right.png">
+            </a>
+        <% } else { %>
+            <a class="book" href="/booklogin">
+                <span>BOOK NOW</span>
+                <img src="/img/arrow_right.png">
+            </a>
+        <% } %>
     </div>
     <div id="side_menu">
         <a class="close" href="#">
             <img src="/img/icon_menu_close.png">
         </a>
         <div class="masker"></div>
-        <a class="book" href="#">
-            <span>BOOK NOW</span>
-            <img src="/img/arrow_right.png">
-        </a>
+        <% if (login) { %>
+            <a class="book" href="/bookdate">
+                <span>BOOK NOW</span>
+                <img src="/img/arrow_right.png">
+            </a>
+        <% } else { %>
+            <a class="book" href="/booklogin">
+                <span>BOOK NOW</span>
+                <img src="/img/arrow_right.png">
+            </a>
+        <% } %>
         <ul>
             <li class="rooms">
                 <span>GUEST<br />ROOMS</span>
@@ -86,8 +107,14 @@
             <span>+81-3-6261-4022</span>
         </div>
         <div class="login_join">
-            <a href="/login">LOGIN</a>
-            <a href="/join">JOIN</a>
+            <% if (login) { %>
+                <a href="/mypage">BOOK</a>
+                <a href="/logout">LOGOUT</a>
+            <% } else { %>
+                <a href="/login">LOGIN</a>
+                <a href="/join">JOIN</a>
+            <% } %>
+            
         </div>
     </div>
     <div id="top">
@@ -98,14 +125,25 @@
     <div id="container">
         <div class="cont1 introduce">
             <div class="book_now">
-                <a href="#">
-                    <div class="book_title">BOOK<br />NOW</div>
-                    <img class="arrow" src="/img/arrow_right.png">
-                    <img class="left_pc" src="/img/par_left_book.png">
-                    <img class="right_pc" src="/img/par_right_book.png">
-                    <img class="left_sp" src="/img/par_left_book_sp.png">
-                    <img class="right_sp" src="/img/par_right_book_sp.png">
-                </a>
+                <% if (login) { %>
+                    <a href="/bookdate">
+                        <div class="book_title">BOOK<br />NOW</div>
+                        <img class="arrow" src="/img/arrow_right.png">
+                        <img class="left_pc" src="/img/par_left_book.png">
+                        <img class="right_pc" src="/img/par_right_book.png">
+                        <img class="left_sp" src="/img/par_left_book_sp.png">
+                        <img class="right_sp" src="/img/par_right_book_sp.png">
+                    </a>
+                <% } else { %>
+                    <a href="/booklogin">
+                        <div class="book_title">BOOK<br />NOW</div>
+                        <img class="arrow" src="/img/arrow_right.png">
+                        <img class="left_pc" src="/img/par_left_book.png">
+                        <img class="right_pc" src="/img/par_right_book.png">
+                        <img class="left_sp" src="/img/par_left_book_sp.png">
+                        <img class="right_sp" src="/img/par_right_book_sp.png">
+                    </a>
+                <% } %>
             </div>
             <div class="text_wrap">
                 <span>NEST HOTEL TOKYO HANZOMON</span>

@@ -1,0 +1,107 @@
+@import "reset";
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    background-color: #282828;
+    > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        img {
+            width: 61px;
+        }
+        p {
+            margin-top: 10px;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
+
+#container {
+    .cont1 {
+        padding: 100px 0 50px;
+        display: flex;
+        justify-content: center;
+        background-color: #f1f2f3;
+        .center {
+            width: 50%;
+            .book_menu {
+                display: flex;
+                width: 100%;
+                li {
+                    width: 33.333333%;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    border: 1px solid #ddd;
+                    border-right: none;
+                    background-color: #fff;
+                    color: #282828;
+                    letter-spacing: 0;
+                    font-size: 18px;
+                    i {
+                        padding-right: 10px;
+                        font-size: 20px;
+                    }
+                    &:nth-child(3) {
+                        border-right: 1px solid #ddd;
+                    }
+                }
+                li.on {
+                    border: 1px solid #282828;
+                    background-color: #282828;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .cont2 {
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        background-color: #f1f2f3;
+        .center {
+            width: 62.5%;
+            background-color: #fff;
+            form {}
+        }
+    }
+}
+
+#footer {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #282828;
+    .left_wrap {
+        padding-left: 60px;
+        ul {
+            display: flex;
+            li {
+                margin-left: 35px;
+                a {
+                    font-size: 13.5px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .right_wrap {
+        padding-right: 60px;
+        color: #fff;
+        font-size: 13.5px;
+        .copyright {
+            margin-left: 35px;
+            color: #969696;
+        }
+    }
+}

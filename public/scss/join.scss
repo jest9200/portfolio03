@@ -10,6 +10,7 @@ body {
 #container {
     width: 100%;
     height: 100vh;
+    padding-bottom: 100px;
     background-image: url(/img/gallery01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,7 +19,7 @@ body {
 
     .join_wrap {
         position: absolute;
-        top: 23%;
+        top: 25%;
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba(0, 0, 0, .8);
@@ -81,6 +82,26 @@ body {
             .info {
                 >div {
                     margin-bottom: 20px;
+                    .form_control {
+                        .error_msg {
+                            display: block;
+                            padding-top: 2px;
+                            font-size: 14px;
+                            line-height: 15px;
+                            color: pink;
+                            letter-spacing: 0;
+                        }
+                    }
+                    .form_control.ok {
+                        span {
+                            display: none;
+                        }
+                    }
+                    .form_control.no {
+                        input {
+                            border: 1px solid pink;
+                        }
+                    }
                 }
 
                 .line01 {
@@ -88,7 +109,7 @@ body {
                     justify-content: space-between;
 
                     >div {
-                        width: 49%;
+                        width: 46%;
 
                         label {
                             color: #fff;
@@ -100,7 +121,7 @@ body {
 
                         input {
                             font-family: 'Montserrat', sans-serif;
-                            width: 92%;
+                            width: 100%;
                             padding: 10px;
                             background-color: rgba(255, 255, 255, .9);
                             color: #111;
@@ -129,7 +150,7 @@ body {
 
                     input {
                         font-family: 'Montserrat', sans-serif;
-                        width: 500px;
+                        width: 100%;
                         padding: 10px;
                         background-color: rgba(255, 255, 255, .9);
                         color: #111;

@@ -81,7 +81,7 @@ html, body {
   z-index: 1;
   transform: translateX(-50%);
 }
-#header_rel .login {
+#header_rel .login, #header_rel .mypage {
   position: absolute;
   top: 40px;
   right: 60px;
@@ -89,13 +89,13 @@ html, body {
   font-size: 15px;
   font-weight: 400;
 }
-#header_rel .login img {
+#header_rel .login img, #header_rel .mypage img {
   margin: 1px 0 0 10px;
   width: 8px;
   height: 14px;
   transition: all 0.3s;
 }
-#header_rel .login:hover img {
+#header_rel .login:hover img, #header_rel .mypage:hover img {
   transform: translateX(5px);
 }
 
