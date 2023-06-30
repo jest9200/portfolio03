@@ -70,7 +70,134 @@ body {
         background-color: #f1f2f3;
         .center {
             width: 62.5%;
-            background-color: #fff;
+            form {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .left_wrap {
+                    width: 48%;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 50px 0;
+                    .date {
+                        label {
+                            display: block;
+                            letter-spacing: 0;
+                            font-size: 20px;
+                            font-weight: 500;
+                            color: #282828;
+                        }
+                        input {
+                            width: 95%;
+                            border: 1px solid #ddd;
+                            padding: 10px;
+                            margin: 10px 0;
+                            font-size: 16px;
+                        }
+                        .flatpickr-calendar.inline {
+                            width: 450px;
+                            .flatpickr-months {
+                                .flatpickr-month {
+                                    height: 75px;
+                                }
+                            }
+                            .flatpickr-innerContainer {
+                                width: 450px;
+                                .flatpickr-rContainer {
+                                    width: 100%;
+                                    .flatpickr-days {
+                                        width: 100%;
+                                        .dayContainer {
+                                            width: 100%;
+                                            max-width: none;
+                                            .flatpickr-day {
+                                                max-width: none;
+                                            }
+                                            
+                                            .flatpickr-day.selected,
+                                            .flatpickr-day.endRange {
+                                                background-color: #282828;
+                                                border-color: #282828;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .right_wrap {
+                    width: 48%;
+                    background-color: #fff;
+                    padding: 50px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .wrap {
+                        width: 70%;
+                        h2 {
+                            letter-spacing: 0;
+                            font-size: 20px;
+                            line-height: 22px;
+                            font-weight: 500;
+                            color: #282828;
+                            margin-bottom: 30px;
+                        }
+                        .check_date {
+                            .checkin,
+                            .checkout {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                label {
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    color: #282828;
+                                    letter-spacing: 0;
+                                }
+                                input {
+                                    width: 50%;
+                                    border: 1px solid #ddd;
+                                    padding: 10px;
+                                    text-align: end
+                                }
+                            }
+                        }
+                        .guest_number,
+                        .room_number {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            label {
+                                font-size: 18px;
+                                font-weight: 500;
+                                color: #282828;
+                                letter-spacing: 0;
+                            }
+                            input {
+                                width: 50%;
+                                border: 1px solid #ddd;
+                                padding: 10px;
+                                text-align: end;
+                            }
+                        }
+                        .searchBtn {
+                            display: block;
+                            width: 100%;
+                            padding: 12px 0;
+                            border: none;
+                            background-color: #282828;
+                            color: #fff;
+                            margin-top: 40px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
     }
 }

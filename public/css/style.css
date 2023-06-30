@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 
 input, button {
   outline: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 html, body {
@@ -81,7 +82,7 @@ html, body {
   z-index: 1;
   transform: translateX(-50%);
 }
-#header_rel .login, #header_rel .mypage {
+#header_rel .login {
   position: absolute;
   top: 40px;
   right: 60px;
@@ -89,13 +90,38 @@ html, body {
   font-size: 15px;
   font-weight: 400;
 }
-#header_rel .login img, #header_rel .mypage img {
+#header_rel .login img {
   margin: 1px 0 0 10px;
   width: 8px;
   height: 14px;
   transition: all 0.3s;
 }
-#header_rel .login:hover img, #header_rel .mypage:hover img {
+#header_rel .login:hover img {
+  transform: translateX(5px);
+}
+#header_rel .afterLogin {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+}
+#header_rel .afterLogin .mypage {
+  padding-right: 25px;
+}
+#header_rel .afterLogin .mypage,
+#header_rel .afterLogin .logout {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+#header_rel .afterLogin .mypage img,
+#header_rel .afterLogin .logout img {
+  margin: 1px 0 0 10px;
+  width: 8px;
+  height: 14px;
+  transition: all 0.3s;
+}
+#header_rel .afterLogin .mypage:hover img,
+#header_rel .afterLogin .logout:hover img {
   transform: translateX(5px);
 }
 
@@ -218,7 +244,7 @@ html, body {
   font-size: 25px;
   color: #fff;
   cursor: pointer;
-  line-height: 22px;
+  line-height: 25px;
   transition: all 0.5s;
 }
 #side_menu ul li:hover {
@@ -232,7 +258,7 @@ html, body {
 }
 #side_menu .phone {
   position: absolute;
-  top: 611px;
+  top: 625px;
   left: 60px;
   width: 170px;
   color: #fff;
@@ -246,7 +272,7 @@ html, body {
 }
 #side_menu .login_join {
   position: absolute;
-  top: 675px;
+  top: 685px;
   left: 60px;
   width: 170px;
 }

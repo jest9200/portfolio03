@@ -31,10 +31,15 @@
             <img class="logo" src="/img/logo.png">
         </a>
         <% if (login) { %>
-            <a class="mypage" href="/mypage">
-                <span>My Bookings</span>
-                <img src="/img/arrow_right.png">
-            </a>
+            <div class="afterLogin">
+                <a class="mypage" href="/mypage">
+                    <span>My Bookings</span>
+                </a>
+                <a class="logout" href="/logout">
+                    <span>LOGOUT</span>
+                    <img src="/img/arrow_right.png">
+                </a>
+            </div>
         <% } else { %>
             <a class="login" href="/login">
                 <span>LOGIN</span>

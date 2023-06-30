@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 
 input, button {
   outline: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 html,
@@ -100,7 +101,131 @@ body {
 }
 #container .cont2 .center {
   width: 62.5%;
+}
+#container .cont2 .center form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#container .cont2 .center form .left_wrap {
+  width: 48%;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+#container .cont2 .center form .left_wrap .date label {
+  display: block;
+  letter-spacing: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #282828;
+}
+#container .cont2 .center form .left_wrap .date input {
+  width: 95%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline {
+  width: 450px;
+}
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline .flatpickr-months .flatpickr-month {
+  height: 75px;
+}
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline .flatpickr-innerContainer {
+  width: 450px;
+}
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline .flatpickr-innerContainer .flatpickr-rContainer {
+  width: 100%;
+}
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline .flatpickr-innerContainer .flatpickr-rContainer .flatpickr-days {
+  width: 100%;
+}
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline .flatpickr-innerContainer .flatpickr-rContainer .flatpickr-days .dayContainer {
+  width: 100%;
+  max-width: none;
+}
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline .flatpickr-innerContainer .flatpickr-rContainer .flatpickr-days .dayContainer .flatpickr-day {
+  max-width: none;
+}
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline .flatpickr-innerContainer .flatpickr-rContainer .flatpickr-days .dayContainer .flatpickr-day.selected,
+#container .cont2 .center form .left_wrap .date .flatpickr-calendar.inline .flatpickr-innerContainer .flatpickr-rContainer .flatpickr-days .dayContainer .flatpickr-day.endRange {
+  background-color: #282828;
+  border-color: #282828;
+}
+#container .cont2 .center form .right_wrap {
+  width: 48%;
+  background-color: #fff;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container .cont2 .center form .right_wrap .wrap {
+  width: 70%;
+}
+#container .cont2 .center form .right_wrap .wrap h2 {
+  letter-spacing: 0;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #282828;
+  margin-bottom: 30px;
+}
+#container .cont2 .center form .right_wrap .wrap .check_date .checkin,
+#container .cont2 .center form .right_wrap .wrap .check_date .checkout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#container .cont2 .center form .right_wrap .wrap .check_date .checkin label,
+#container .cont2 .center form .right_wrap .wrap .check_date .checkout label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #282828;
+  letter-spacing: 0;
+}
+#container .cont2 .center form .right_wrap .wrap .check_date .checkin input,
+#container .cont2 .center form .right_wrap .wrap .check_date .checkout input {
+  width: 50%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: end;
+}
+#container .cont2 .center form .right_wrap .wrap .guest_number,
+#container .cont2 .center form .right_wrap .wrap .room_number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#container .cont2 .center form .right_wrap .wrap .guest_number label,
+#container .cont2 .center form .right_wrap .wrap .room_number label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #282828;
+  letter-spacing: 0;
+}
+#container .cont2 .center form .right_wrap .wrap .guest_number input,
+#container .cont2 .center form .right_wrap .wrap .room_number input {
+  width: 50%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: end;
+}
+#container .cont2 .center form .right_wrap .wrap .searchBtn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  background-color: #282828;
+  color: #fff;
+  margin-top: 40px;
+  cursor: pointer;
 }
 
 #footer {

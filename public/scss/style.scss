@@ -55,7 +55,7 @@ html, body {
         }
     }
     
-    .login,.mypage {
+    .login {
         position: absolute;
         top: 40px;
         right: 60px;
@@ -71,6 +71,32 @@ html, body {
         &:hover {
             img {
                 transform: translateX(5px);
+            }
+        }
+    }
+
+    .afterLogin {
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        .mypage {
+            padding-right: 25px;
+        }
+        .mypage,
+        .logout {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+            img {
+                margin: 1px 0 0 10px;
+                width: 8px;
+                height: 14px;
+                transition: all .3s;
+            }
+            &:hover {
+                img {
+                    transform: translateX(5px);
+                }
             }
         }
     }
@@ -198,7 +224,7 @@ html, body {
             font-size: 25px;
             color: #fff;
             cursor: pointer;
-            line-height: 22px;
+            line-height: 25px;
             transition: all .5s;
             &:hover {
                 opacity: .7;
@@ -213,7 +239,7 @@ html, body {
     }
     .phone {
         position: absolute;
-        top: 611px;
+        top: 625px;
         left: 60px;
         width: 170px;
         color: #fff;
@@ -227,7 +253,7 @@ html, body {
     }
     .login_join{
         position: absolute;
-        top: 675px;
+        top: 685px;
         left: 60px;
         width: 170px;
         a {
