@@ -1,0 +1,43 @@
+<%- include("subHeader",{ title:"MY PAGE | NESTHOTEL TOKYO HANZOMON", cssFiles:["mypage_list.css"],jsFiles:[] }) %>
+    <div id="container">
+        <div class="cont1">
+            <div class="center">
+                <div class="wrapper">
+                    <div class="img_wrap">
+                        <img src="/img/mypageBg.jpg">
+                    </div>
+                    <h2>Please Check your Reservations.</h2>
+                    <h3>
+                        <span>- Check-in time is from 15:00 to 24:00. / Check-out time is from 11:00.</span>
+                        <span>- Parking is not possible. Please use it on foot.</span>
+                        <span>- All rooms are non-smoking.</span>
+                    </h3>
+                    <% for( let i = 0; i < data.length; i++ ) { %>
+                        <% if (data[i].username === login.membername) { %>
+                            <a href="/mypage/detail/<%- data[i].num %>" class="book_info">
+                                <p>
+                                    <%- data[i].checkin %> ~ <%- data[i].checkout %>
+                                </p>
+                                <p> Guest Numbers : 
+                                    <%- data[i].adult + data[i].child01 + data[i].child02 %>
+                                    <span class="subtext">
+                                        (adult : <%- data[i].adult %> / children : <%- data[i].child01 %> / infant
+                                                : <%- data[i].child02 %>)
+                                    </span>
+                                </p>
+                            </a>
+                        <% } %>
+                    <% } %>
+                    <div class="question">
+                        <a href="/bookdetail">
+                            Do you need a reservation? Click here.
+                        </a>
+                        <a href="/">
+                            Do you want to go back to main page? Click here.
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("subFooter")%>

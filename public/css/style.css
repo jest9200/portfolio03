@@ -278,6 +278,7 @@ html, body {
 }
 #side_menu .login_join a {
   color: #fff;
+  font-size: 14px;
   margin-right: 10px;
   transition: all 0.5s;
 }
@@ -411,6 +412,13 @@ html, body {
   line-height: 45px;
   margin-top: 30px;
   font-weight: 400;
+}
+#container .cont1 .text_wrap p {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 1;
+  color: #969696;
+  margin-top: 15px;
 }
 #container .cont1 #search {
   margin-top: 70px;
@@ -682,9 +690,6 @@ html, body {
 }
 #container .cont2 .top_wrap .swiper .swiper-button-next::after {
   font-size: 0px;
-}
-#container .cont2 .top_wrap .swiper .swiper-button-next:hover {
-  right: 50px;
 }
 #container .cont2 .bot_wrap {
   opacity: 0;

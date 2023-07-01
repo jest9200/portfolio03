@@ -1,0 +1,425 @@
+@import "reset";
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    background-color: #282828;
+    > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        img {
+            width: 61px;
+        }
+        p {
+            margin-top: 10px;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
+
+#container {
+    .cont1 {
+        padding: 100px 0 50px;
+        display: flex;
+        justify-content: center;
+        background-color: #f1f2f3;
+        .center {
+            width: 50%;
+            .book_menu {
+                display: flex;
+                width: 100%;
+                li {
+                    width: 50%;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    border: 1px solid #ddd;
+                    border-right: none;
+                    background-color: #fff;
+                    color: #282828;
+                    letter-spacing: 0;
+                    font-size: 18px;
+                    i {
+                        padding-right: 10px;
+                        font-size: 20px;
+                    }
+                    &:nth-child(2) {
+                        border-right: 1px solid #ddd;
+                    }
+                }
+                li.on {
+                    border: 1px solid #282828;
+                    background-color: #282828;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .cont2 {
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        background-color: #f1f2f3;
+        .center {
+            width: 62.5%;
+            form {
+                width: 100%;
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                .top_wrap {
+                    display: flex;
+                    justify-content: space-between;
+                    .left_wrap {
+                        width: 48%;
+                        background-color: #fff;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 50px 0;
+                        .date {
+                            label {
+                                display: block;
+                                letter-spacing: 0;
+                                font-size: 20px;
+                                font-weight: 500;
+                                color: #282828;
+                            }
+                            input {
+                                width: 95%;
+                                border: 1px solid #ddd;
+                                padding: 10px;
+                                margin: 10px 0;
+                                font-size: 16px;
+                            }
+                            .flatpickr-calendar.inline {
+                                width: 450px;
+                                .flatpickr-months {
+                                    .flatpickr-month {
+                                        height: 75px;
+                                    }
+                                }
+                                .flatpickr-innerContainer {
+                                    width: 450px;
+                                    .flatpickr-rContainer {
+                                        width: 100%;
+                                        .flatpickr-days {
+                                            width: 100%;
+                                            .dayContainer {
+                                                width: 100%;
+                                                max-width: none;
+                                                .flatpickr-day {
+                                                    max-width: none;
+                                                }
+                                                
+                                                .flatpickr-day.selected,
+                                                .flatpickr-day.endRange {
+                                                    background-color: #282828;
+                                                    border-color: #282828;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right_wrap {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #fff;
+                        width: 48%;
+                        .wrap {
+                            width: 70%;
+                            h2 {
+                                letter-spacing: 0;
+                                font-size: 20px;
+                                line-height: 22px;
+                                font-weight: 500;
+                                color: #282828;
+                                margin-bottom: 30px;
+                            }
+                            .adult_wrap {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 20px;
+                                h4 {
+                                    letter-spacing: 0;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    color: #282828;  
+                                }
+                                .count {
+                                    display: flex;
+                                    align-items: center;
+                                    .minus,
+                                    .plus {
+                                        font-size: 40px;
+                                        text-align: center;
+                                        line-height: 30px;
+                                        width: 30px;
+                                        height: 30px;
+                                        background-color: #282828;
+                                        color: #fff;
+                                        cursor: pointer;
+                                    }
+                                    input {
+                                        width: 40px;
+                                        height: 30px;
+                                        text-align: end;
+                                        line-height: 30px;
+                                        padding-right: 10px;
+                                        background-color: #f1f2f3;
+                                        border: none;
+                                    }
+                                }
+                            }
+                            .child_wrap {
+                                > div {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-bottom: 15px;
+                                    h4 {
+                                        letter-spacing: 0;
+                                        font-weight: 500;
+                                        color: #282828; 
+                                    }                                  
+                                }
+                                .line01 {
+                                    h4 {
+                                        font-size: 18px;
+                                    }
+                                } 
+                                .line03,
+                                .line04,
+                                .line05 {
+                                    h4 {
+                                        font-size: 14px;
+                                    }
+                                    p {
+                                        letter-spacing: 0;
+                                        font-size: 15px;
+                                    }
+                                }
+                                .line02,
+                                .line06 {
+                                    h4 {
+                                        font-size: 14px;
+                                    }
+                                    .count {
+                                        display: flex;
+                                        align-items: center;
+                                        .minus,
+                                        .plus {
+                                            font-size: 40px;
+                                            text-align: center;
+                                            line-height: 30px;
+                                            width: 30px;
+                                            height: 30px;
+                                            background-color: #282828;
+                                            color: #fff;
+                                            cursor: pointer;
+                                        }
+                                        input {
+                                            width: 40px;
+                                            height: 30px;
+                                            text-align: end;
+                                            line-height: 30px;
+                                            padding-right: 10px;
+                                            background-color: #f1f2f3;
+                                            border: none;
+                                        }
+                                    }
+    
+                                }
+                            }
+                            .room_wrap {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 20px;
+                                h4 {
+                                    letter-spacing: 0;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    color: #282828; 
+                                }
+                                .count {
+                                    display: flex;
+                                    align-items: center;
+                                    .minus,
+                                    .plus {
+                                        font-size: 40px;
+                                        text-align: center;
+                                        line-height: 30px;
+                                        width: 30px;
+                                        height: 30px;
+                                        background-color: #282828;
+                                        color: #fff;
+                                        cursor: pointer;
+                                    }
+                                    input {
+                                        width: 40px;
+                                        height: 30px;
+                                        text-align: end;
+                                        line-height: 30px;
+                                        padding-right: 10px;
+                                        background-color: #f1f2f3;
+                                        border: none;
+                                    }
+                                }
+                            }
+                            .searchBtn {
+                                display: block;
+                                width: 100%;
+                                background-color: #282828;
+                                border: none;
+                                color: #fff;
+                                padding: 15px 0;
+                                margin: 30px auto 0;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .bot_wrap {
+                    display: none;
+                    width: 100%;
+                    background-color: #fff;
+                    margin-top: 50px;
+                    .wrapper {
+                        padding: 50px;
+                        h4 {
+                            letter-spacing: 0;
+                            font-size: 20px;
+                            font-weight: 500;
+                            color: #282828; 
+                            margin-bottom: 20px;
+                        }
+                        .room01,.room02,.room03,.room04 {
+                            display: flex;
+                            margin-bottom: 20px;
+                            .img_wrap {
+                                width: 30%;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .context_wrap {
+                                width: 70%;
+                                .explain {
+                                    padding: 25px 50px;
+                                    h3 {
+                                        letter-spacing: 0;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        color: #282828; 
+                                        margin-bottom: 20px;
+                                    }
+                                    > div {
+                                        letter-spacing: 0;
+                                        font-size: 15px;
+                                        font-weight: 400;
+                                        color: #282828; 
+                                        margin-bottom: 10px;
+                                        display: flex;
+                                        p {
+                                            padding-right: 15px;
+                                            i {
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .count {
+                                    display: flex;
+                                    justify-content: end;
+                                    align-items: center;
+                                    padding: 0 50px;
+                                    .minus,
+                                    .plus {
+                                        font-size: 40px;
+                                        text-align: center;
+                                        line-height: 30px;
+                                        width: 30px;
+                                        height: 30px;
+                                        background-color: #282828;
+                                        color: #fff;
+                                        cursor: pointer;
+                                    }
+                                    input {
+                                        width: 40px;
+                                        height: 30px;
+                                        text-align: end;
+                                        line-height: 30px;
+                                        padding-right: 10px;
+                                        background-color: #f1f2f3;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                        .bookBtn {
+                            display: block;
+                            width: 400px;
+                            background-color: #282828;
+                            border: none;
+                            color: #fff;
+                            padding: 15px 0;
+                            margin: 30px auto 0;
+                            cursor: pointer;
+                            // &:disabled {
+                            //     background-color: #ddd;
+                            //     color: #aaa;
+                            // }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+#footer {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #282828;
+    .left_wrap {
+        padding-left: 60px;
+        ul {
+            display: flex;
+            li {
+                margin-left: 35px;
+                a {
+                    font-size: 13.5px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .right_wrap {
+        padding-right: 60px;
+        color: #fff;
+        font-size: 13.5px;
+        .copyright {
+            margin-left: 35px;
+            color: #969696;
+        }
+    }
+}

@@ -1,0 +1,201 @@
+<%- include("subHeader",{ title:"BOOK | NESTHOTEL TOKYO HANZOMON", cssFiles:["bookdetail.css"],jsFiles:["book/bookdetail.js"] }) %>
+    <div id="container">
+        <div class="cont1">
+            <div class="center">
+                <ul class="book_menu">
+                    <li class="on"><i class="fa-solid fa-circle-user"></i>Schedule / Guests / Rooms</li>
+                    <li><i class="fa-solid fa-briefcase"></i>Confirm Reservation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cont2">
+            <div class="center">
+                <form action="/bookfirst" method="get">
+                    <input type="hidden" name="username" value="<%- login.membername %>">
+                    <div class="top_wrap">
+                        <div class="left_wrap">
+                            <div class="date">
+                                <label for="form_control">Specify Date</label>
+                                <input name="checkdate" id="form_control" type="datetime-local"
+                                    placeholder="Select your check-in & check-out date.">
+                            </div>
+                        </div>
+                        <div class="right_wrap">
+                            <div class="wrap">
+                                <h2>Specify the number of guests and reserved rooms</h2>
+                                <div class="count_wrap">
+                                    <div class="adult_wrap">
+                                        <h4>adult</h4>
+                                        <div class="count">
+                                            <span class="minus">-</span>
+                                            <input class="adult" name="adult" class="num" type="number" min="1" max="5" readonly="readonly" value="1">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                    <div class="child_wrap">
+                                        <div class="line01">
+                                            <h4>child</h4>
+                                        </div>
+                                        <div class="line02">
+                                            <h4>Elementary school student</h4>
+                                            <div class="count">
+                                                <span class="minus">-</span>
+                                                <input class="child01" name="child01" class="num" type="number" min="0" max="5" readonly="readonly" value="0">
+                                                <span class="plus">+</span>
+                                            </div>
+                                        </div>
+                                        <div class="line03">
+                                            <h4>Infant (with futon and meal)</h4>
+                                            <p>unacceptable</p>
+                                        </div>
+                                        <div class="line04">
+                                            <h4>Infant (futon only)</h4>
+                                            <p>unacceptable</p>
+                                        </div>
+                                        <div class="line05">
+                                            <h4>Infant (meals only)</h4>
+                                            <p>unacceptable</p>
+                                        </div>
+                                        <div class="line06">
+                                            <h4>Infant (no futon/meals required)</h4>
+                                            <div class="count">
+                                                <span class="minus">-</span>
+                                                <input class="child02" name="child02" type="number" min="0" max="5" readonly="readonly" value="0">
+                                                <span class="plus">+</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room_wrap">
+                                        <h4>guest room</h4>
+                                        <div class="count">
+                                            <span class="minus">-</span>
+                                            <input class="total_room" name="totalRoom" class="num" type="number" min="1" max="5" readonly="readonly" value="1">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                    <button class="searchBtn" type="button">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_wrap">
+                        <div class="wrapper">
+                            <h4>Choose your Rooms</h4>
+                            <div class="room01">
+                                <div class="img_wrap">
+                                    <img src="/img/room01_singleroom.jpg">
+                                </div>
+                                <div class="context_wrap">
+                                    <div class="explain">
+                                        <h3>[Non-smoking throughout] Single room</h3>
+                                        <div>
+                                            <p><i class="fa-solid fa-ban-smoking"></i><span>no smoking</span></p>
+                                            <p><i class="fa-solid fa-hotel"></i><span>11.00㎡</span></p>
+                                            <p><i class="fa-solid fa-bed"></i><span>bed width 120cm</span></p>
+                                        </div>
+                                        <div>
+                                            <p><i class="fa-solid fa-utensils"></i><span>without meals</span></p>
+                                            <p><i class="fa-regular fa-clock"></i><span>in 15:00~24:00 / out 11:00</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="count">
+                                        <span class="minus">-</span>
+                                        <input name="room01" type="number" readonly="readonly" value="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="room02">
+                                <div class="img_wrap">
+                                    <img src="/img/room02_twinroom.jpg">
+                                </div>
+                                <div class="context_wrap">
+                                    <div class="explain">
+                                        <h3>[Non-smoking throughout] Twin room</h3>
+                                        <div>
+                                            <p><i class="fa-solid fa-ban-smoking"></i><span>no smoking</span></p>
+                                            <p><i class="fa-solid fa-hotel"></i><span>15.00㎡</span></p>
+                                            <p><i class="fa-solid fa-bed"></i><span>bed width 120cm x 2</span></p>
+                                        </div>
+                                        <div>
+                                            <p><i class="fa-solid fa-utensils"></i><span>without meals</span></p>
+                                            <p><i class="fa-regular fa-clock"></i><span>in 15:00~24:00 / out 11:00</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="count">
+                                        <span class="minus">-</span>
+                                        <input name="room02" type="number" readonly="readonly" value="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="room03">
+                                <div class="img_wrap">
+                                    <img src="/img/room03_universalroom.jpg">
+                                </div>
+                                <div class="context_wrap">
+                                    <div class="explain">
+                                        <h3>[Non-smoking throughout] Universal room</h3>
+                                        <div>
+                                            <p><i class="fa-solid fa-ban-smoking"></i><span>no smoking</span></p>
+                                            <p><i class="fa-solid fa-hotel"></i><span>25.00㎡</span></p>
+                                            <p><i class="fa-solid fa-bed"></i><span>bed width 120cm x 3</span></p>
+                                        </div>
+                                        <div>
+                                            <p><i class="fa-solid fa-utensils"></i><span>without meals</span></p>
+                                            <p><i class="fa-regular fa-clock"></i><span>in 15:00~24:00 / out 11:00</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="count">
+                                        <span class="minus">-</span>
+                                        <input name="room03" type="number" readonly="readonly" value="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="room04">
+                                <div class="img_wrap">
+                                    <img src="/img/room04_kingroom.jpg">
+                                </div>
+                                <div class="context_wrap">
+                                    <div class="explain">
+                                        <h3>[Non-smoking throughout] King room</h3>
+                                        <div>
+                                            <p><i class="fa-solid fa-ban-smoking"></i><span>no smoking</span></p>
+                                            <p><i class="fa-solid fa-hotel"></i><span>15.00㎡</span></p>
+                                            <p><i class="fa-solid fa-bed"></i><span>bed width 200cm</span></p>
+                                        </div>
+                                        <div>
+                                            <p><i class="fa-solid fa-utensils"></i><span>without meals</span></p>
+                                            <p><i class="fa-regular fa-clock"></i><span>in 15:00~24:00 / out 11:00</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="count">
+                                        <span class="minus">-</span>
+                                        <input name="room04" type="number" readonly="readonly" value="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <button class="bookBtn" type="submit" >Booking</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("input[type=datetime-local]", {
+            minDate: "today",
+            maxDate: new Date().fp_incr(100),
+            mode: "range",
+            inline: true,
+        });
+    </script>
+    <%- include("subFooter")%>

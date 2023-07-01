@@ -1,0 +1,139 @@
+@import "reset";
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    background-color: #282828;
+    > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        img {
+            width: 61px;
+        }
+        p {
+            margin-top: 10px;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
+
+#container {
+    .cont1 {
+        display: flex;
+        justify-content: center;
+        background-color: #f1f2f3;
+        padding: 100px 0;
+        .center {
+            background-color: #fff;
+            width: 50%;
+            .book_wrap {
+                padding: 50px 80px;
+                h2 {
+                    letter-spacing: 0;
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: #282828;
+                    margin-bottom: 10px;
+                }
+                h4 {
+                    letter-spacing: 0;
+                    font-size: 20px;
+                    line-height: 25px;
+                    font-weight: 500;
+                    color: #282828;
+                    margin-bottom: 40px;
+                }
+                .confirm {
+                    >div {
+                        margin-bottom: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        .index {
+                            letter-spacing: 0;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #282828;
+                            padding-right: 50px;
+                        }
+                        .data {
+                            letter-spacing: 0;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #282828;
+                            .subtext{
+                                font-size: 14px;
+                                color: #969696;
+                            }
+                            .room01,.room02,.room03,.room04 {
+                                display: block;
+                                margin-bottom: 10px;
+                                text-align: end;
+                            }
+                        }
+                    }
+                }
+                .btns {
+                    display: flex;
+                    justify-content: center;
+                    > a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 200px;
+                        height: 50px;
+                        background-color: #282828;
+                        color: #fff;
+                        margin: 50px 10px 0;
+                        letter-spacing: 0;
+                    }
+                }
+                .reference {
+                    letter-spacing: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #969696;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #282828;
+    .left_wrap {
+        padding-left: 60px;
+        ul {
+            display: flex;
+            li {
+                margin-left: 35px;
+                a {
+                    font-size: 13.5px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .right_wrap {
+        padding-right: 60px;
+        color: #fff;
+        font-size: 13.5px;
+        .copyright {
+            margin-left: 35px;
+            color: #969696;
+        }
+    }
+}

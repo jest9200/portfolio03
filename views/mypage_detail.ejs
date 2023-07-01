@@ -1,39 +1,40 @@
-<%- include("subHeader",{ title:"BOOK | NESTHOTEL TOKYO HANZOMON", cssFiles:["bookfinish.css"],jsFiles:[] }) %>
+<%- include("subHeader",{ title:"MY PAGE | NESTHOTEL TOKYO HANZOMON", cssFiles:["mypage_detail.css"],jsFiles:["mypage/cancel.js"] }) %>
     <div id="container">
         <div class="cont1">
             <div class="center">
-                <ul class="book_menu">
-                    <li><i class="fa-solid fa-circle-user"></i>Schedule / Guests / Rooms</li>
-                    <li class="on"><i class="fa-solid fa-briefcase"></i>Confirm Reservation</li>
-                </ul>
-            </div>
-        </div>
-        <div class="cont2">
-            <div class="center">
                 <div class="book_wrap">
                     <h2>Thanks for your Reservation!</h2>
-                    <h4>Your reservation is complete.<br />Please check the reservation information.</h4>
+                    <h4>This is your reservation information.<br />Please check the dates and additional details.</h4>
                     <div class="confirm">
                         <div>
                             <span class="index">Guest Name</span>
-                            <span class="data"><%- login.membername %></span></div>
+                            <span class="data"><%- login.membername %></span>
+                        </div>
                         <div>
-                            <span class="index">Guest E-mail</span>
-                            <span class="data"><%- login.memberid %></span></div>
+                            <span class="index">Guest E-mail Address</span>
+                            <span class="data"><%- login.memberid %></span>
+                        </div>
+                        <div>
+                            <span class="index">Guest Phone Number</span>
+                            <span class="data"><%- login.memberphone %></span>
+                        </div>
                         <div>
                             <span class="index">Check-in</span>
-                            <span class="data"><%- data.checkin %></span></div>
+                            <span class="data"><%- data.checkin %></span>
+                        </div>
                         <div>
                             <span class="index">Check-out</span>
-                            <span class="data"><%- data.checkout %></span></div>
+                            <span class="data"><%- data.checkout %></span>
+                        </div>
+                        
                         <div>
                             <span class="index">Guest Numbers</span>
                             <span class="data">
                                 <%- data.adult + data.child01 + data.child02 %>
-                                <span class="subtext">
-                                    (adult : <%- data.adult %> / children : <%- data.child01 %> / infant
-                                            : <%- data.child02 %>)
-                                </span>
+                                    <span class="subtext">
+                                        (adult : <%- data.adult %> / children : <%- data.child01 %> / infant
+                                                : <%- data.child02 %>)
+                                    </span>
                             </span>
                         </div>
                         <div>
@@ -47,8 +48,8 @@
                         </div>
                     </div>
                     <div class="btns">
-                        <a href="/">Return to Main</a>
-                        <a href="/mypage/list">Go to My Page</a>
+                        <a href="/mypage/list">Back</a>
+                        <a class="cancel" href="/cancel/<%- data.num %>">Cancel</a>
                     </div>
                     <p class="reference">※ Payment can only be made at the Nest Hotel on-site.</p>
                 </div>

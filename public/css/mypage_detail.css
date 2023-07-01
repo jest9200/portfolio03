@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+  letter-spacing: 1.5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+img, video {
+  vertical-align: top;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+input, button {
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  background-color: #282828;
+}
+#header > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+#header > a img {
+  width: 61px;
+}
+#header > a p {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+#container .cont1 {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f2f3;
+  padding: 100px 0;
+}
+#container .cont1 .center {
+  background-color: #fff;
+  width: 50%;
+}
+#container .cont1 .center .book_wrap {
+  padding: 50px 80px;
+}
+#container .cont1 .center .book_wrap h2 {
+  letter-spacing: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #282828;
+  margin-bottom: 10px;
+}
+#container .cont1 .center .book_wrap h4 {
+  letter-spacing: 0;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #282828;
+  margin-bottom: 40px;
+}
+#container .cont1 .center .book_wrap .confirm > div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#container .cont1 .center .book_wrap .confirm > div .index {
+  letter-spacing: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #282828;
+  padding-right: 50px;
+}
+#container .cont1 .center .book_wrap .confirm > div .data {
+  letter-spacing: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #282828;
+}
+#container .cont1 .center .book_wrap .confirm > div .data .subtext {
+  font-size: 14px;
+  color: #969696;
+}
+#container .cont1 .center .book_wrap .confirm > div .data .room01, #container .cont1 .center .book_wrap .confirm > div .data .room02, #container .cont1 .center .book_wrap .confirm > div .data .room03, #container .cont1 .center .book_wrap .confirm > div .data .room04 {
+  display: block;
+  margin-bottom: 10px;
+  text-align: end;
+}
+#container .cont1 .center .book_wrap .btns {
+  display: flex;
+  justify-content: center;
+}
+#container .cont1 .center .book_wrap .btns > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: #282828;
+  color: #fff;
+  margin: 50px 10px 0;
+  letter-spacing: 0;
+}
+#container .cont1 .center .book_wrap .reference {
+  letter-spacing: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #969696;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#footer {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #282828;
+}
+#footer .left_wrap {
+  padding-left: 60px;
+}
+#footer .left_wrap ul {
+  display: flex;
+}
+#footer .left_wrap ul li {
+  margin-left: 35px;
+}
+#footer .left_wrap ul li a {
+  font-size: 13.5px;
+  color: #fff;
+}
+#footer .right_wrap {
+  padding-right: 60px;
+  color: #fff;
+  font-size: 13.5px;
+}
+#footer .right_wrap .copyright {
+  margin-left: 35px;
+  color: #969696;
+}

@@ -141,10 +141,61 @@ app.post("/user", (req, res) => {
 });
 
 
-// 예약페이지 요청
-app.get("/bookdate",(req,res)=>{
-    res.render("bookdate.ejs",{login:req.user});
+// 예약 첫번째 페이지 요청
+app.get("/bookdetail",(req,res)=>{
+    res.render("bookdetail.ejs",{login:req.user});
 })
 
+// 예약 두번째 페이지 요청
+app.get("/bookfinish/:num",(req,res)=>{
+    db.collection("bookinfo").findOne({num:Number(req.params.num)},(err,result)=>{
+        res.render("bookfinish.ejs",{data:result,login:req.user});
+    })
+})
+
+// 예약페이지 정보 db에 넣기
+app.get("/bookfirst",(req,res)=>{
+    db.collection("count").findOne({name:"예약번호"},(err,countResult)=>{
+        db.collection("bookinfo").insertOne({
+            username:req.query.username,
+            num:countResult.bookCount,
+            checkin:req.query.checkdate.substring(0,10), //체크인 날짜
+            checkout:req.query.checkdate.slice(-10), //체크아웃 날짜
+            adult:Number(req.query.adult), //게스트 성인 수
+            child01:Number(req.query.child01), //게스트 어린이(초등생) 수
+            child02:Number(req.query.child02), //게스트 유아 수
+            totalRoom:Number(req.query.totalRoom), //방 갯수
+            room01:Number(req.query.room01), //single room 선택 갯수
+            room02:Number(req.query.room02), //twin room 선택 갯수
+            room03:Number(req.query.room03), //universal room 선택 갯수
+            room04:Number(req.query.room04) //king room 선택 갯수
+        },(err,result)=>{
+            db.collection("count").updateOne({name:"예약번호"},{$inc:{bookCount:1}},(err,result)=>{
+                res.redirect(`/bookfinish/${countResult.bookCount}`)
+            })
+        })
+    })
+})
+
+// mypage 목록페이지
+app.get("/mypage/list",(req,res)=>{
+    db.collection("bookinfo").find().toArray((err,result)=>{
+        res.render("mypage_list.ejs",{data:result,login:req.user})
+    })
+})
+
+// mypage 상세페이지
+app.get("/mypage/detail/:num", (req, res) => {
+    db.collection("bookinfo").findOne({ num: Number(req.params.num) }, (err, result) => {
+        res.render("mypage_detail.ejs", { data: result, login: req.user });
+    })
+})
+
+// 예약취소 cancel
+app.get("/cancel/:num",(req,res)=>{
+    db.collection("bookinfo").deleteOne({num:Number(req.params.num)},(err,result)=>{
+        res.redirect("/mypage/list");
+    })
+})
 
 

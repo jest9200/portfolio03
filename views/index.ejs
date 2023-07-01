@@ -32,7 +32,7 @@
         </a>
         <% if (login) { %>
             <div class="afterLogin">
-                <a class="mypage" href="/mypage">
+                <a class="mypage" href="/mypage/list">
                     <span>My Bookings</span>
                 </a>
                 <a class="logout" href="/logout">
@@ -55,7 +55,7 @@
             <img class="logo" src="/img/logo.png">
         </a>
         <% if (login) { %>
-            <a class="book" href="/bookdate">
+            <a class="book" href="/bookdetail">
                 <span>BOOK NOW</span>
                 <img src="/img/arrow_right.png">
             </a>
@@ -72,7 +72,7 @@
         </a>
         <div class="masker"></div>
         <% if (login) { %>
-            <a class="book" href="/bookdate">
+            <a class="book" href="/bookdetail">
                 <span>BOOK NOW</span>
                 <img src="/img/arrow_right.png">
             </a>
@@ -113,7 +113,7 @@
         </div>
         <div class="login_join">
             <% if (login) { %>
-                <a href="/mypage">BOOK</a>
+                <a href="/mypage/list">MYPAGE</a>
                 <a href="/logout">LOGOUT</a>
             <% } else { %>
                 <a href="/login">LOGIN</a>
@@ -131,7 +131,7 @@
         <div class="cont1 introduce">
             <div class="book_now">
                 <% if (login) { %>
-                    <a href="/bookdate">
+                    <a href="/bookdetail">
                         <div class="book_title">BOOK<br />NOW</div>
                         <img class="arrow" src="/img/arrow_right.png">
                         <img class="left_pc" src="/img/par_left_book.png">
@@ -156,66 +156,10 @@
                 <h2 class="sp">A HIDEAWAY IN THE CENTER OF THE CITY.</h2>
                 <h3>With a book or drink in hand, stay and relax at your very own<br />hideaway in the center of the
                     city.</h3>
+                <p>Nest Hotel Tokyo Hanzomon is one of the most stylish and neat hotels in Tokyo.<br/>We will always provide you with the best service and a comfortable bed.<br/>Whether for work or play, delight in your central hub to Tokyo. Please contact us.</p>
             </div>
-            <form id="search" method="get"> <!-- 나중에 action 추가-->
-                <div class="src_checkin">
-                    <span>CHECK-IN</span>
-                    <select name="dt_yyyy_mm" id="dt_yyyy_mm">
-                        <option value="202307">Jul 2023</option>
-                        <option value="202308">Aug 2023</option>
-                        <option value="202309">Sep 2023</option>
-                        <option value="202310">Oct 2023</option>
-                        <option value="202311">Nov 2023</option>
-                        <option value="202312">Dec 2023</option>
-                    </select>
-                    <select name="dt_dd" id="dt_dd">
-                        <% for(let i=1; i<31; i++) { %>
-                            <option value=<%- i %>><%- i %></option>
-                            <% } %>
-                    </select>
-                </div>
-                <div class="src_checkout">
-                    <span>CHECK-OUT</span>
-                    <select name="dt_yyyy_mm" id="dt_yyyy_mm">
-                        <option value="202307">Jul 2023</option>
-                        <option value="202308">Aug 2023</option>
-                        <option value="202309">Sep 2023</option>
-                        <option value="202310">Oct 2023</option>
-                        <option value="202311">Nov 2023</option>
-                        <option value="202312">Dec 2023</option>
-                    </select>
-                    <select name="dt_dd" id="dt_dd">
-                        <% for(let i=1; i<=31; i++) { %>
-                            <option value=<%- i %>><%- i %></option>
-                            <% } %>
-                    </select>
-                </div>
-                <div class="src_guests">
-                    <span>GUESTS</span>
-                    <select name="guests">
-                        <% for(let i=1; i<=5; i++) { %>
-                            <option value=<%- i %>><%- i %></option>
-                            <% } %>
-                    </select>
-                </div>
-                <div class="src_rooms">
-                    <span>ROOMS</span>
-                    <select name="rooms">
-                        <% for(let i=1; i<=3; i++) { %>
-                            <option value=<%- i %>><%- i %></option>
-                            <% } %>
-                    </select>
-                </div>
-                <div class="src_button">
-                    <input type="submit" name="submit" value="SEARCH">
-                    <img class="left_pc" src="/img/par_left_book.png">
-                    <img class="right_pc" src="/img/par_right_book.png">
-                    <img class="left_sp" src="/img/par_left_book_sp.png">
-                    <img class="right_sp" src="/img/par_right_book_sp.png">
-                </div>
-            </form>
             <a class="mybookings" href="#">
-                <span>My bookings</span><img src="/img/arrow_right.png">
+                <span>My Bookings</span><img src="/img/arrow_right.png">
             </a>
         </div>
         <div class="cont2 rooms">
