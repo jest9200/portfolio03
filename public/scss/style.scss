@@ -317,6 +317,8 @@ html, body {
             height: 100px;
             z-index: 2;
             transform: translateX(-50%);
+            transition: all .5s ;
+            cursor: pointer;
             > a {
                 color: #fff;
                 .book_title {
@@ -361,6 +363,9 @@ html, body {
                 .right_sp {
                     right: 0;
                 }
+            }
+            &:hover {
+                background-color: rgba(0,0,0,.7);
             }
         }
         .text_wrap {

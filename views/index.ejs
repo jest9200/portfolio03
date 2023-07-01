@@ -158,9 +158,15 @@
                     city.</h3>
                 <p>Nest Hotel Tokyo Hanzomon is one of the most stylish and neat hotels in Tokyo.<br/>We will always provide you with the best service and a comfortable bed.<br/>Whether for work or play, delight in your central hub to Tokyo. Please contact us.</p>
             </div>
-            <a class="mybookings" href="#">
-                <span>My Bookings</span><img src="/img/arrow_right.png">
-            </a>
+            <% if (login) { %>
+                <a class="mybookings" href="/bookdetail">
+                    <span>BOOK NOW</span><img src="/img/arrow_right.png">
+                </a>
+            <% } else { %>
+                <a class="mybookings" href="/booklogin">
+                    <span>BOOK NOW</span><img src="/img/arrow_right.png">
+                </a>
+            <% } %>
         </div>
         <div class="cont2 rooms">
             <div class="top_wrap">

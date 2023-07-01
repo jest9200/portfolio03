@@ -337,6 +337,8 @@ html, body {
   height: 100px;
   z-index: 2;
   transform: translateX(-50%);
+  transition: all 0.5s;
+  cursor: pointer;
 }
 #container .cont1 .book_now > a {
   color: #fff;
@@ -382,6 +384,9 @@ html, body {
 }
 #container .cont1 .book_now > a .right_sp {
   right: 0;
+}
+#container .cont1 .book_now:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 #container .cont1 .text_wrap {
   padding-left: 60px;
