@@ -62,29 +62,59 @@ window.addEventListener("scroll", () => {
         cont5TrainWrap.classList.remove("open");
     }
 
-    if(scTop > cont6.offsetTop){
-        banner01.classList.add("open");
-    } else {
-        banner01.classList.remove("open");
-    }
+   
 
-    if(scTop > cont6.offsetTop + topCont.clientHeight){
-        banner02.classList.add("open");
+    const mobile = matchMedia("screen and (max-width:768px)");
+    if(mobile.matches){
+        if(scTop > cont6.offsetTop){
+            banner01.classList.add("open");
+        } else {
+            banner01.classList.remove("open");
+        }
+        
+        if(scTop > cont6.offsetTop + 165){
+            banner02.classList.add("open");
+        } else {
+            banner02.classList.remove("open");
+        }
+    
+        if(scTop > cont6.offsetTop + 165 + 165){
+            banner03.classList.add("open");
+        } else {
+            banner03.classList.remove("open");
+        }
+    
+        if(scTop > cont6.offsetTop + 165 + 165 + 165){
+            banner04.classList.add("open");
+        } else {
+            banner04.classList.remove("open");
+        }
     } else {
-        banner02.classList.remove("open");
+        if(scTop > cont6.offsetTop){
+            banner01.classList.add("open");
+        } else {
+            banner01.classList.remove("open");
+        }
+        
+        if(scTop > cont6.offsetTop + topCont.clientHeight){
+            banner02.classList.add("open");
+        } else {
+            banner02.classList.remove("open");
+        }
+    
+        if(scTop > cont6.offsetTop + topCont.clientHeight + topCont.clientHeight){
+            banner03.classList.add("open");
+        } else {
+            banner03.classList.remove("open");
+        }
+    
+        if(scTop > cont6.offsetTop + topCont.clientHeight + topCont.clientHeight + topCont.clientHeight){
+            banner04.classList.add("open");
+        } else {
+            banner04.classList.remove("open");
+        }
     }
-
-    if(scTop > cont6.offsetTop + topCont.clientHeight + topCont.clientHeight){
-        banner03.classList.add("open");
-    } else {
-        banner03.classList.remove("open");
-    }
-
-    if(scTop > cont6.offsetTop + topCont.clientHeight + topCont.clientHeight + topCont.clientHeight){
-        banner04.classList.add("open");
-    } else {
-        banner04.classList.remove("open");
-    }
+    
 
     if(scTop > cont7.offsetTop){
         cont7.classList.add("open");

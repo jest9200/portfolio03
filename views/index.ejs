@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <div id="loader">
+    <!-- <div id="loader">
         <img src="/img/logotype_large.png">
-    </div>
+    </div> -->
     <div id="header_rel">
         <a href="#">
             <img class="menu" src="/img/icon_menu.png">
@@ -32,8 +32,11 @@
         </a>
         <% if (login) { %>
             <div class="afterLogin">
-                <a class="mypage" href="/mypage/list">
+                <a class="mypage pc" href="/mypage/list">
                     <span>My Bookings</span>
+                </a>
+                <a class="mypage sp" href="/mypage/list">
+                    <span>My<br/>Bookings</span>
                 </a>
                 <a class="logout" href="/logout">
                     <span>LOGOUT</span>
@@ -55,13 +58,21 @@
             <img class="logo" src="/img/logo.png">
         </a>
         <% if (login) { %>
-            <a class="book" href="/bookdetail">
+            <a class="book pc" href="/bookdetail">
                 <span>BOOK NOW</span>
                 <img src="/img/arrow_right.png">
             </a>
+            <a class="book sp" href="/bookdetail">
+                <span>BOOK<br/>NOW</span>
+                <img src="/img/arrow_right.png">
+            </a>
         <% } else { %>
-            <a class="book" href="/booklogin">
+            <a class="book pc" href="/booklogin">
                 <span>BOOK NOW</span>
+                <img src="/img/arrow_right.png">
+            </a>
+            <a class="book sp" href="/booklogin">
+                <span>BOOK<br/>NOW</span>
                 <img src="/img/arrow_right.png">
             </a>
         <% } %>
@@ -383,7 +394,39 @@
                     <img src="/img/line05_pc.png">
                 </div>
             </div>
-            <!-- <div class="airport_sp"></div> 반응형할때 만들기 -->
+            <div class="airport_sp">
+                <div class="line01">
+                    <p>By Train <span>12min</span></p>
+                    <img src="/img/line01_sp.jpg">
+                </div>
+                <div class="line02">
+                    <h4>AIRPORT ACCESS</h4>
+                    <h5>HANEDA AIRPORT</h5>
+                    <div class="wrap">
+                        <div class="left">
+                            <p>By Tokyo Monorail <span>50min</span></p>
+                            <img src="/img/line02_sp.jpg">
+                        </div>
+                        <div class="right">
+                            <p>By Keihinkyuko Line <span>40min</span></p>
+                            <img src="/img/line03_sp.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="line03">
+                    <h5>NARITA AIRPORT</h5>
+                    <div class="wrap">
+                        <div class="left">
+                            <p>By Limousine Bus <span>90min</span></p>
+                            <img src="/img/line04_sp.jpg">
+                        </div>
+                        <div class="right">
+                            <p>By JR Narita Express <span>90min</span></p>
+                            <img src="/img/line05_sp.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="cont6 gallery">
             <div class="title">
@@ -424,17 +467,38 @@
                 <div class="txt_col02">
                     <span class="subtitle">LOCATIONS</span>
                     <ul>
-                        <li><span>OSAKA</span>NEST HOTEL OSAKA UMEDA</li>
-                        <li><span>HIROSHIMA</span>NEST HOTEL HIROSHIMA HATCHOBORI</li>
-                        <li><span>HIROSHIMA</span>NEST HOTEL HIROSHIMA STATION</li>
-                        <li><span>HAKATA</span>NEST HOTEL HAKATA STATION</li>
+                        <li>
+                            <span class="place">OSAKA</span>
+                            <span class="hotel">NEST HOTEL OSAKA UMEDA</span>
+                        </li>
+                        <li>
+                            <span class="place">HIROSHIMA</span>
+                            <span class="hotel">NEST HOTEL HIROSHIMA HATCHOBORI</span>
+                        </li>
+                        <li>
+                            <span class="place">HIROSHIMA</span>
+                            <span class="hotel">NEST HOTEL HIROSHIMA STATION</span>
+                        </li>
+                        <li>
+                            <span class="place">HAKATA</span>
+                            <span class="hotel">NEST HOTEL HAKATA STATION</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="txt_col03">
                     <ul>
-                        <li><span>NAHA</span>TISSAGE HOTEL NAHA</li>
-                        <li><span>NAHA</span>NEST HOTEL NAHA KUMOJI</li>
-                        <li><span>NAHA</span>NEST HOTEL NAHA NISHI</li>
+                        <li>
+                            <span class="place">NAHA</span>
+                            <span class="hotel">TISSAGE HOTEL NAHA</span>
+                        </li>
+                        <li>
+                            <span class="place">NAHA</span>
+                            <span class="hotel">NEST HOTEL NAHA KUMOJI</span>
+                        </li>
+                        <li>
+                            <span class="place">NAHA</span>
+                            <span class="hotel">NEST HOTEL NAHA NISHI</span>
+                        </li>
                     </ul>
                 </div>
             </div>

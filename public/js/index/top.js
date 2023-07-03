@@ -39,18 +39,18 @@ function cont1Change() {
 const loader = document.querySelector("#loader");
 const loaderImg = document.querySelector("#loader img");
 
-window.addEventListener("load",()=>{
-    setTimeout(()=>{
-        loaderImg.style.opacity = 1;
-        setTimeout(()=>{
-            loaderImg.style.opacity = 0;
-            setTimeout(()=>{
-                loader.style.opacity = 0;
-                setTimeout(()=>{
-                    loader.style.display = "none";
-                },900)
-            },1000)
-        },1500)
-    },500);
-    cont1Change();
-});
+// window.addEventListener("load",()=>{
+//     setTimeout(()=>{
+//         loaderImg.style.opacity = 1;
+//         setTimeout(()=>{
+//             loaderImg.style.opacity = 0;
+//             setTimeout(()=>{
+//                 loader.style.opacity = 0;
+//                 setTimeout(()=>{
+//                     loader.style.display = "none";
+//                 },900)
+//             },1000)
+//         },1500)
+//     },500);
+//     cont1Change();
+// });
