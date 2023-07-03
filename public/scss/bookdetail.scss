@@ -423,3 +423,155 @@ body {
         }
     }
 }
+
+
+@media screen and (max-width:1600px) {
+    #container {
+        .cont1 {
+            .center {
+                width: 80%;
+            }
+        }
+        .cont2 {
+            .center {
+                width: 95%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    #container {
+        .cont2 {
+            .center {
+                form {
+                    .top_wrap {
+                        flex-direction: column;
+                        align-items: center;
+                        .left_wrap {
+                            width: 100%;
+                        }
+                        .right_wrap {
+                            width: 100%;
+                            padding-bottom: 50px;
+                        }
+                    }
+                    .bot_wrap {
+                        .wrapper {
+                            padding: 30px;
+                            .room01,.room02,.room03,.room04 {
+                                flex-direction: column;
+                                padding-bottom: 40px;
+                                .img_wrap {
+                                    width: 100%;
+                                }
+                                .context_wrap {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        .left_wrap {
+            padding-left: 0px;
+            margin-bottom: 10px;
+            ul {
+                li {
+                    margin-left: 0px;
+                    width: 33.333333%;
+                    text-align: center;
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .right_wrap {
+            text-align: center;
+            padding-right: 0px;
+            line-height: 18px;
+            .copyright {
+                display: block;
+                margin-left: 0px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #container {
+        .cont1 {
+            .center {
+                width: 100%;
+                .book_menu {
+                    li {
+                        font-size: 12px;
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .cont2 {
+            .center {
+                width: 100%;
+                form {
+                    .top_wrap {
+                        .left_wrap {
+                            .date {
+                                input {
+                                    width: 280px;
+                                    font-size: 14px;
+                                }
+                                .flatpickr-calendar.inline {
+                                    width: 300px;
+                                    .flatpickr-innerContainer {
+                                        width: 300px;
+                                    }
+                                }
+                            }
+                        }
+                        .right_wrap {
+                            .wrap {
+                                width: 90%;
+                            }
+                        }
+                    }
+                    .bot_wrap {
+                        .wrapper {
+                            padding: 10px;
+                            .room01,.room02,.room03,.room04 {
+                                .context_wrap {
+                                    width: 100%;
+                                    .explain {
+                                        padding: 0;
+                                        padding-top: 20px;
+                                    }
+                                    .count {
+                                        padding: 0;
+                                        padding-top: 10px;
+                                    }
+                                }
+                            }
+                            .bookBtn {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

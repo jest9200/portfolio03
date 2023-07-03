@@ -201,3 +201,68 @@ body {
   margin-left: 35px;
   color: #969696;
 }
+
+@media screen and (max-width: 1200px) {
+  #container .cont1 .center {
+    width: 80%;
+  }
+  #container .cont2 .center {
+    width: 90%;
+  }
+  #container .cont2 .center .book_wrap {
+    padding: 50px 10px;
+  }
+  #container .cont2 .center .book_wrap h2 {
+    font-size: 20px;
+  }
+  #container .cont2 .center .book_wrap h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  #container .cont2 .center .book_wrap .confirm > div .index, #container .cont2 .center .book_wrap .confirm > div .data {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  #container .cont2 .center .book_wrap .btns > a {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer .left_wrap {
+    padding-left: 0px;
+    margin-bottom: 10px;
+  }
+  #footer .left_wrap ul li {
+    margin-left: 0px;
+    width: 33.333333%;
+    text-align: center;
+  }
+  #footer .left_wrap ul li a {
+    font-size: 12px;
+  }
+  #footer .right_wrap {
+    text-align: center;
+    padding-right: 0px;
+    line-height: 18px;
+  }
+  #footer .right_wrap .copyright {
+    display: block;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #container .cont1 .center {
+    width: 100%;
+  }
+  #container .cont1 .center .book_menu li {
+    font-size: 12px;
+  }
+  #container .cont1 .center .book_menu li i {
+    font-size: 14px;
+  }
+}

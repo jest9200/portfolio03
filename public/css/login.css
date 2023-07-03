@@ -85,6 +85,39 @@ input, button {
   color: #969696;
 }
 
+@media screen and (max-width: 1024px) {
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer .left_wrap {
+    padding-left: 0px;
+    margin-bottom: 10px;
+  }
+  #footer .left_wrap ul li {
+    margin-left: 0px;
+    width: 33.333333%;
+    text-align: center;
+  }
+  #footer .left_wrap ul li a {
+    font-size: 12px;
+  }
+  #footer .right_wrap {
+    text-align: center;
+    padding-right: 0px;
+    line-height: 18px;
+  }
+  #footer .right_wrap .copyright {
+    display: block;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #header > a p {
+    display: none;
+  }
+}
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -222,4 +255,60 @@ html, body {
 }
 #container .login_wrap #login_form .link_wrap > a:hover {
   color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  #container .login_wrap {
+    padding: 70px 100px 50px;
+  }
+  #container .login_wrap .title {
+    top: -70px;
+    left: 50%;
+    width: 200px;
+    height: 90px;
+  }
+  #container .login_wrap .title > div {
+    left: 50%;
+    top: 30px;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 45px;
+    transform: translateX(-50%);
+  }
+  #container .login_wrap .title .left_pc,
+  #container .login_wrap .title .right_pc {
+    display: none;
+  }
+  #container .login_wrap .title .left_sp,
+  #container .login_wrap .title .right_sp {
+    display: block;
+  }
+  #container .login_wrap #login_form {
+    width: 100%;
+  }
+  #container .login_wrap #login_form .email_wrap input,
+  #container .login_wrap #login_form .pass_wrap input {
+    width: 300px;
+  }
+  #container .login_wrap #login_form .btn_wrap {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #container .login_wrap {
+    width: 100%;
+    padding: 40px 0;
+  }
+  #container .login_wrap #login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #container .login_wrap #login_form .email_wrap input,
+  #container .login_wrap #login_form .pass_wrap input {
+    width: 270px;
+  }
+  #container .login_wrap #login_form .btn_wrap {
+    width: 280px;
+  }
 }

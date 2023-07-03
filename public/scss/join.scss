@@ -202,8 +202,149 @@ body {
                     letter-spacing: 0;
                     font-size: 15px;
                     transition: all .5s;
+                    text-align: center;
                     &:hover {
                         color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1400px) {
+    #container {
+        .join_wrap {
+            padding: 50px 100px;
+            #join {
+                .info {
+                    .line01 {
+                        display: block;
+                        > div {
+                            width: 100%;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #container {
+        .join_wrap {
+            width: 100%;
+            .title {
+                top: -70px;
+                left: 50%;
+                width: 240px;
+                height: 90px;
+
+                >div {
+                    width: 200px;
+                    left: 50%;
+                    top: 30px;
+                    font-size: 45px;
+                    font-weight: 600;
+                    line-height: 45px;
+                    transform: translateX(-50%);
+                }
+    
+                .left_pc,
+                .right_pc {
+                    display: none;
+                }
+    
+                .left_sp,
+                .right_sp {
+                    display: block;
+                }
+            }
+    
+            #join {
+                .info { 
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .line01 {
+                        > div {
+                            input {
+                                width: 300px;
+                            }
+                        }
+                    }
+                    .line02,
+                    .line03,
+                    .line04 {    
+                        input {
+                            width: 300px;
+                        }
+                    }
+    
+                    .line05 {
+                        label {
+                            padding-left: 10px;
+                            color: #fff;
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+    
+                .btns {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    button {
+                        width: 320px;
+                    }
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 15px;
+                        color: rgba(255, 255, 255, .5);
+                        letter-spacing: 0;
+                        font-size: 15px;
+                        transition: all .5s;
+                        text-align: center;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #container {
+        padding-bottom: 300px;
+        .join_wrap {
+            #join {
+                .info {
+                    .line01 {
+                        > div {
+                            input {
+                                width: 250px;
+                            }
+                        }
+                    }
+                    .line02,
+                    .line03,
+                    .line04 {    
+                        input {
+                            width: 250px;
+                        }
+                    }
+                    .line05 {
+                        width: 250px;
+                    }
+                }
+    
+                .btns {
+                    button {
+                        width: 270px;
                     }
                 }
             }

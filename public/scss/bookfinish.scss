@@ -174,3 +174,90 @@ body {
         }
     }
 }
+
+@media screen and (max-width:1200px) {
+    #container {
+        .cont1 {
+            .center {
+                width: 80%;
+            }
+        }
+        .cont2 {
+            .center {
+                width: 90%;
+                .book_wrap {
+                    padding: 50px 10px;
+                    h2 {
+                        font-size: 20px;
+                    }
+                    h4 {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                    .confirm {
+                        > div {
+                            .index,.data {
+                                font-size: 14px;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                    .btns {
+                        > a {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        .left_wrap {
+            padding-left: 0px;
+            margin-bottom: 10px;
+            ul {
+                li {
+                    margin-left: 0px;
+                    width: 33.333333%;
+                    text-align: center;
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .right_wrap {
+            text-align: center;
+            padding-right: 0px;
+            line-height: 18px;
+            .copyright {
+                display: block;
+                margin-left: 0px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #container {
+        .cont1 {
+            .center {
+                width: 100%;
+                .book_menu {
+                    li {
+                        font-size: 12px;
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
