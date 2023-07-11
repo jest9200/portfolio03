@@ -3,7 +3,7 @@ const MongoClient = require("mongodb").MongoClient;
 //데이터베이스의 데이터 입력,출력을 위한 함수명령어 불러들이는 작업
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 //ejs 태그를 사용하기 위한 세팅
 app.set("view engine","ejs");
