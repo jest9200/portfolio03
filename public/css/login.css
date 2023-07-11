@@ -242,6 +242,12 @@ html, body {
   background-color: #777;
   color: #555;
 }
+#container .login_wrap #login_form .admin {
+  display: block;
+  padding-top: 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
 #container .login_wrap #login_form .link_wrap {
   text-align: center;
 }
